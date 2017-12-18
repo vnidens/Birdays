@@ -25,15 +25,12 @@ import android.view.ViewGroup;
 
 import com.djonique.birdays.R;
 import com.djonique.birdays.fragments.AllFragment;
-import com.djonique.birdays.fragments.FamousFragment;
 import com.djonique.birdays.fragments.MonthFragment;
 import com.djonique.birdays.models.Person;
 
 import java.util.Calendar;
 
 public class PagerAdapter extends FragmentPagerAdapter {
-
-    public static final int FAMOUS_FRAGMENT_POSITION = 2;
 
     private Context context;
     private MonthFragment monthFragment;
@@ -51,8 +48,6 @@ public class PagerAdapter extends FragmentPagerAdapter {
                 return new MonthFragment();
             case 1:
                 return new AllFragment();
-            case 2:
-                return new FamousFragment();
             default:
                 return null;
         }
@@ -65,7 +60,7 @@ public class PagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 2;
     }
 
     @Override
@@ -75,8 +70,6 @@ public class PagerAdapter extends FragmentPagerAdapter {
                 return getMonth();
             case 1:
                 return context.getString(R.string.all);
-            case 2:
-                return context.getString(R.string.famous);
         }
         return null;
     }

@@ -30,8 +30,6 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -43,7 +41,6 @@ import android.widget.Toast;
 
 import com.djonique.birdays.BuildConfig;
 import com.djonique.birdays.R;
-import com.djonique.birdays.adapters.FamousFragmentAdapter;
 import com.djonique.birdays.alarm.AlarmHelper;
 import com.djonique.birdays.database.DbHelper;
 import com.djonique.birdays.models.Person;
@@ -55,7 +52,6 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 import com.kobakei.ratethisapp.RateThisApp;
 
 import java.util.Calendar;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -97,8 +93,6 @@ public class DetailActivity extends AppCompatActivity {
     RelativeLayout rlEmail;
     @BindView(R.id.textview_detail_email)
     TextView tvEmail;
-    @BindView(R.id.recyclerview_detail)
-    RecyclerView recyclerView;
 
     private FirebaseAnalytics mFirebaseAnalytics;
     private InterstitialAd mInterstitialAd;
@@ -147,10 +141,6 @@ public class DetailActivity extends AppCompatActivity {
         if (actionBar != null) actionBar.setDisplayHomeAsUpEnabled(true);
 
         setupUI();
-
-        loadBornThisDay();
-
-        recyclerView.setFocusable(false);
 
         rateThisAppInit(this);
     }
@@ -238,22 +228,6 @@ public class DetailActivity extends AppCompatActivity {
 
     private boolean isEmpty(String text) {
         return text == null || text.equals("");
-    }
-
-    /**
-     * Loads list of famous persons born certain day
-     */
-    private void loadBornThisDay() {
-        LinearLayoutManager manager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(manager);
-
-        FamousFragmentAdapter adapter = new FamousFragmentAdapter();
-        recyclerView.setAdapter(adapter);
-
-        List<Person> famousPersons = dbHelper.query().getFamousBornThisDay(date);
-        for (int i = 0; i < famousPersons.size(); i++) {
-            adapter.addPerson(famousPersons.get(i));
-        }
     }
 
     @OnClick(R.id.fab_detail)

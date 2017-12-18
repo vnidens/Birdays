@@ -192,13 +192,6 @@ public class MainActivity extends AppCompatActivity implements
     @OnPageChange(R.id.viewpager_main)
     void onPageSelected(int position) {
         appBarLayout.setExpanded(true, true);
-        if (position == PagerAdapter.FAMOUS_FRAGMENT_POSITION) {
-            fab.hide();
-            searchView.setVisibility(View.GONE);
-        } else {
-            fab.show();
-            searchView.setVisibility(View.VISIBLE);
-        }
     }
 
     @OnClick(R.id.fab_main)
