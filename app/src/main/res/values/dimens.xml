@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
+    Copyright 2017 Victor Nidens
     Copyright 2017 Evgeny Timofeev
 
     Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,6 +19,15 @@
 
 <resources>
     <!-- default dimens -->
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_default">16dp</dimen>
+    <dimen name="margin_medium">24dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+
+    <dimen name="margin_vertical_small">4dp</dimen>
+    <dimen name="margin_vertical_default">8dp</dimen>
+    <dimen name="margin_vertical_medium">16dp</dimen>
+
     <dimen name="default_padding">16sp</dimen>
     <dimen name="default_layout_height">72sp</dimen>
     <dimen name="default_left_margin_56sp">56sp</dimen>

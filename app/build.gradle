@@ -42,15 +42,19 @@ android {
     buildTypes {
         debug {
             minifyEnabled false
-            resValue "string", "banner_ad_id", keystoreProperties['BannerAdIdDebug']
-            buildConfigField "String", "INTERSTITIAL_AD_ID", keystoreProperties['InterstitialAdIdDebug']
+//            resValue "string", "banner_ad_id", keystoreProperties['BannerAdIdDebug']
+//            buildConfigField "String", "INTERSTITIAL_AD_ID", keystoreProperties['InterstitialAdIdDebug']
+            resValue "string", "banner_ad_id", "s"
+            buildConfigField "String", "INTERSTITIAL_AD_ID", "\"s\""
         }
         release {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            resValue "string", "banner_ad_id", keystoreProperties['BannerAdIdRelease']
-            buildConfigField "String", "INTERSTITIAL_AD_ID", keystoreProperties['InterstitialAdIdRelease']
+//            resValue "string", "banner_ad_id", keystoreProperties['BannerAdIdRelease']
+//            buildConfigField "String", "INTERSTITIAL_AD_ID", keystoreProperties['InterstitialAdIdRelease']
+            resValue "string", "banner_ad_id", "s"
+            buildConfigField "String", "INTERSTITIAL_AD_ID", "\"s\""
         }
     }
 }

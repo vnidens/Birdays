@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
+	Copyright 2017 Victor Nidens
     Copyright 2017 Evgeny Timofeev
 
     Licensed under the Apache License, Version 2.0 (the "License");
@@ -2914,4 +2915,7 @@
     <string name="willis">Connie Willis</string>
     <string name="val_kilmer">Val Kilmer</string>
     <string name="psy" translatable="false">PSY</string>
+    <string name="anniversary">Anniversary</string>
+    <string name="event">Event</string>
+    <string name="celebrates_description">celebrates %s</string>
 </resources>
