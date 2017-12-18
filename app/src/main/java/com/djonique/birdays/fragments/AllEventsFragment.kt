@@ -75,7 +75,7 @@ class AllEventsFragment
         super.onStart()
 
         context?.let {
-            AppDatabase.getInstance(it)
+            AppDatabase.instance(it)
                     .getPersons()
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(
