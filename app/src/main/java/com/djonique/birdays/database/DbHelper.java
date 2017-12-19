@@ -40,7 +40,7 @@ public class DbHelper extends SQLiteOpenHelper {
     static final String SELECTION_TIME_STAMP = COLUMN_TIME_STAMP + " = ?";
 
     private static final String DB_NAME = "my_db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 3;
     private static final String DB_PERSONS_CREATE = "CREATE TABLE " + DB_PERSONS + " ("
             + BaseColumns._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + COLUMN_NAME + " TEXT, "
@@ -49,11 +49,6 @@ public class DbHelper extends SQLiteOpenHelper {
             + COLUMN_PHONE_NUMBER + " TEXT, "
             + COLUMN_EMAIL + " TEXT, "
             + COLUMN_TIME_STAMP + " INTEGER"
-            + ");";
-    private static final String DB_FAMOUS_CREATE = "CREATE TABLE " + DB_FAMOUS + " ("
-            + BaseColumns._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-            + COLUMN_NAME + " TEXT, "
-            + COLUMN_DATE + " INTEGER"
             + ");";
 
     private DbQueryManager dbQueryManager;
@@ -68,19 +63,16 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(DB_PERSONS_CREATE);
-        db.execSQL(DB_FAMOUS_CREATE);
-        DbFamous.createFamousDb(context, db);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        if (oldVersion == 1 && newVersion == 2) {
+        if(newVersion == 3) {
             db.beginTransaction();
             try {
+
                 db.execSQL("DROP TABLE IF EXISTS " + DB_FAMOUS);
-                db.execSQL(DB_FAMOUS_CREATE);
-                DbFamous.createFamousDb(context, db);
-                db.setTransactionSuccessful();
+                db.setTransactionSuccessfull();
             } finally {
                 db.endTransaction();
             }
