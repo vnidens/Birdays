@@ -34,20 +34,18 @@
     <string name="record_deleted">Kayıt silindi</string>
     <string name="undo">Geri al</string>
 
-    <string-array name="months">
-        <item>Ocak</item>
-        <item>Şubat</item>
-        <item>Mart</item>
-        <item>Nisan</item>
-        <item>Mayıs</item>
-        <item>Haziran</item>
-        <item>Temmuz</item>
-        <item>Ağustos</item>
-        <item>Eylül</item>
-        <item>Ekim</item>
-        <item>Kasım</item>
-        <item>Aralık</item>
-    </string-array>
+    <string name="january">Ocak</string>
+    <string name="february">Şubat</string>
+    <string name="march">Mart</string>
+    <string name="april">Nisan</string>
+    <string name="may">Mayıs</string>
+    <string name="june">Haziran</string>
+    <string name="july">Temmuz</string>
+    <string name="august">Ağustos</string>
+    <string name="september">Eylül</string>
+    <string name="october">Ekim</string>
+    <string name="november">Kasım</string>
+    <string name="december">Aralık</string>
 
     <!-- Menu -->
     <string name="action_sync">Senkronizasyon</string>

@@ -37,20 +37,18 @@
     <string name="record_deleted">Record deleted</string>
     <string name="undo">Undo</string>
 
-    <string-array name="months">
-        <item>January</item>
-        <item>February</item>
-        <item>March</item>
-        <item>April</item>
-        <item>May</item>
-        <item>June</item>
-        <item>July</item>
-        <item>August</item>
-        <item>September</item>
-        <item>October</item>
-        <item>November</item>
-        <item>December</item>
-    </string-array>
+    <string name="january">January</string>
+    <string name="february">February</string>
+    <string name="march">March</string>
+    <string name="april">April</string>
+    <string name="may">May</string>
+    <string name="june">June</string>
+    <string name="july">July</string>
+    <string name="august">August</string>
+    <string name="september">September</string>
+    <string name="october">October</string>
+    <string name="november">November</string>
+    <string name="december">December</string>
 
     <!-- Menu -->
     <string name="action_sync">Synchronization</string>
@@ -144,15 +142,6 @@
         <item>Before 3 days</item>
         <item>Before 1 week</item>
         <item>Before 2 weeks</item>
-    </string-array>
-
-    <string-array name="additional_notification_entry_values" translatable="false">
-        <item>0</item>
-        <item>86400000</item>
-        <item>172800000</item>
-        <item>259200000</item>
-        <item>604800000</item>
-        <item>1209600000</item>
     </string-array>
 
     <string-array name="additional_notification_delay">

@@ -34,20 +34,18 @@
     <string name="record_deleted">Запис видалений</string>
     <string name="undo">Скасувати</string>
 
-    <string-array name="months">
-        <item>Січень</item>
-        <item>Лютий</item>
-        <item>Березень</item>
-        <item>Квітень</item>
-        <item>Травень</item>
-        <item>Червень</item>
-        <item>Липень</item>
-        <item>Серпень</item>
-        <item>Вересень</item>
-        <item>Жовтень</item>
-        <item>Листопад</item>
-        <item>Грудень</item>
-    </string-array>
+    <string name="january">Січень</string>
+    <string name="february">Лютий</string>
+    <string name="march">Березень</string>
+    <string name="april">Квітень</string>
+    <string name="may">Травень</string>
+    <string name="june">Червень</string>
+    <string name="july">Липень</string>
+    <string name="august">Серпень</string>
+    <string name="september">Вересень</string>
+    <string name="october">Жовтень</string>
+    <string name="november">Листопад</string>
+    <string name="december">Грудень</string>
 
     <!-- Menu -->
     <string name="action_sync">Синхронізація</string>
