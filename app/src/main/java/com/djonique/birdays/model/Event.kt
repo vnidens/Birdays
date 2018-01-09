@@ -1,8 +1,6 @@
 package com.djonique.birdays.model
 
-import android.arch.persistence.room.Entity
-import android.arch.persistence.room.ForeignKey
-import android.arch.persistence.room.PrimaryKey
+import android.arch.persistence.room.*
 import java.util.*
 
 /**
@@ -43,6 +41,11 @@ import java.util.*
                     childColumns = ["personId"],
                     onDelete = ForeignKey.CASCADE
             )
+        ],
+        indices = [
+            Index("id"),
+            Index("personId"),
+            Index("providerId")
         ]
 )
 data class Event(
@@ -63,8 +66,11 @@ data class Event(
 
     var personId: Long = 0
 
-    var dataVersion: Long? = null
-    var providerId: Long? = null
+    var dataVersion: Long = -1
+    var providerId: Long = -1
 
     var deleted: Boolean = false
+
+    @Ignore
+    var person: Person? = null
 }

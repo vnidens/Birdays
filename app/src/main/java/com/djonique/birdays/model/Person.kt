@@ -2,6 +2,7 @@ package com.djonique.birdays.model
 
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.Ignore
+import android.arch.persistence.room.Index
 import android.arch.persistence.room.PrimaryKey
 
 /**
@@ -33,7 +34,8 @@ import android.arch.persistence.room.PrimaryKey
  * SOFTWARE.
  */
 
-@Entity(tableName = "Persons")
+@Entity(tableName = "Persons",
+        indices = [Index("name"), Index("providerId")])
 data class Person(
         var name: String = "",
         var phone: String? = null,
@@ -42,7 +44,7 @@ data class Person(
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0
 
-    var providerId: Long? = null
+    var providerId: Long = -1
     var deleted: Boolean = false
 
     @Ignore
