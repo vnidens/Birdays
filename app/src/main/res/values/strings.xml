@@ -238,6 +238,7 @@
 
     <string name="anniversary">Anniversary</string>
     <string name="event">Event</string>
-    <string name="celebrates_description">celebrates %s</string>
+    <string name="celebrates_event_name">celebrates %s</string>
+    <string name="marks_event_name">marks %s</string>
     <string name="upcoming">Upcoming</string>
 </resources>

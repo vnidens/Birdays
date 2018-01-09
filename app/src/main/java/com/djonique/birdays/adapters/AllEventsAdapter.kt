@@ -5,6 +5,7 @@ import android.graphics.drawable.GradientDrawable
 import android.preference.PreferenceManager
 import android.support.v4.content.ContextCompat
 import android.support.v7.widget.RecyclerView
+import android.util.SparseBooleanArray
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -49,23 +50,24 @@ import java.util.*
  * SOFTWARE.
  */
 
-class AllEventsAdapter(context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class AllEventsAdapter(context: Context)
+    : RecyclerView.Adapter<RecyclerView.ViewHolder>(),
+        EventsAdapter {
+
+    private val monthsLabels = context.resources.getStringArray(R.array.months)
+    private val monthsLabelsStatus = SparseBooleanArray(12)
 
     private val items = mutableListOf<Item>()
     private val itemsComparator = ItemsComparator()
 
-    private var displayedAge = "0"
+    private var displayedAge = PreferenceManager.getDefaultSharedPreferences(context)
+            .getString(Constants.DISPLAYED_AGE_KEY, "0")
 
-    init {
-        context.resources.getStringArray(R.array.months).forEachIndexed { index, s ->
-            items.add(MonthItem(index, s))
-        }
+    private var _eventSelectedListener: EventsAdapter.OnEventSelectedListener? = null
+    override var onEventSelectedListener: EventsAdapter.OnEventSelectedListener?
+        get() = _eventSelectedListener
+        set(value) { _eventSelectedListener = value }
 
-        displayedAge = PreferenceManager.getDefaultSharedPreferences(context)
-                .getString(Constants.DISPLAYED_AGE_KEY, "0")
-    }
-
-    var onItemClickListener: OnItemClickListener? = null
     var onItemLongClickListener: OnItemLongClickListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -105,14 +107,15 @@ class AllEventsAdapter(context: Context) : RecyclerView.Adapter<RecyclerView.Vie
     fun add(person: Person) {
         person.events.map { EventItem(it, person) }
                 .forEach { eventItem ->
-                    val index = items.indexOfLast { itemsComparator.compare(it, eventItem) == -1 }
+                    val insertPosition = insertSorted(eventItem)
+                    notifyItemInserted(insertPosition)
 
-                    if(index != -1) {
-                        items.add(index + 1, eventItem)
-                        notifyItemInserted(index + 1)
-                    } else {
-                        items.add(eventItem)
-                        notifyItemInserted(items.size - 1)
+                    eventItem.event.date.month().let { month ->
+                        if(!monthsLabelsStatus[month]) {
+                            items.add(insertPosition, MonthItem(month, monthsLabels[month]))
+                            notifyItemInserted(insertPosition)
+                            monthsLabelsStatus.put(month, true)
+                        }
                     }
                 }
     }
@@ -121,7 +124,21 @@ class AllEventsAdapter(context: Context) : RecyclerView.Adapter<RecyclerView.Vie
         persons.forEach(this::add)
     }
 
-    inner class EventViewHolder(itemView: View)
+    fun clear() {
+        items.clear()
+        monthsLabelsStatus.clear()
+    }
+
+    private fun insertSorted(item: Item): Int {
+        val index = items.indexOfFirst { itemsComparator.compare(it, item) == 1 }.let {
+            if(it != -1) it else items.size
+        }
+
+        items.add(index, item)
+        return index
+    }
+
+    internal inner class EventViewHolder(itemView: View)
         : RecyclerView.ViewHolder(itemView),
             View.OnClickListener,
             View.OnLongClickListener {
@@ -160,14 +177,20 @@ class AllEventsAdapter(context: Context) : RecyclerView.Adapter<RecyclerView.Vie
                 tvAge.visibility = View.INVISIBLE
             }
 
-            tvEventName.text = context.getString(R.string.celebrates_description).format(
-                    when (item.event.type) {
-                        Event.Type.Birthday -> context.getString(R.string.birthday)
-                        Event.Type.Anniversary -> context.getString(R.string.anniversary)
-                        Event.Type.Other -> context.getString(R.string.event)
-                        Event.Type.Custom -> item.event.label
-                    }
-            )
+            tvEventName.text = item.event.type.let {
+                val eventDescription = when (it) {
+                    Event.Type.Birthday, Event.Type.Anniversary -> context.getString(R.string.celebrates_event_name)
+                    else -> context.getString(R.string.marks_event_name)
+                }
+                eventDescription.format(
+                        when (item.event.type) {
+                            Event.Type.Birthday -> context.getString(R.string.birthday)
+                            Event.Type.Anniversary -> context.getString(R.string.anniversary)
+                            Event.Type.Other -> context.getString(R.string.event)
+                            Event.Type.Custom -> item.event.label
+                        }
+                )
+            }
 
             tvDate.text = if (item.event.isYearKnown) {
                 Utils.getDate(item.event.date.time)
@@ -177,7 +200,7 @@ class AllEventsAdapter(context: Context) : RecyclerView.Adapter<RecyclerView.Vie
         }
 
         override fun onClick(v: View?) {
-            onItemClickListener?.onItemClick(item.event, item.person)
+            onEventSelectedListener?.onEventSelected(item.event, item.person)
         }
 
         override fun onLongClick(v: View?): Boolean {
@@ -204,7 +227,7 @@ class AllEventsAdapter(context: Context) : RecyclerView.Adapter<RecyclerView.Vie
         }
     }
 
-    class MonthViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    internal class MonthViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         @BindView(R.id.textview_separator)
         lateinit var tvMonthName: TextView
@@ -216,15 +239,11 @@ class AllEventsAdapter(context: Context) : RecyclerView.Adapter<RecyclerView.Vie
             ButterKnife.bind(this, itemView)
         }
 
-        fun bind(item: MonthItem) {
+        internal fun bind(item: MonthItem) {
             this.item = item
             tvMonthName.text = item.name
         }
 
-    }
-
-    interface OnItemClickListener {
-        fun onItemClick(event: Event, person: Person)
     }
 
     interface OnItemLongClickListener {
@@ -233,14 +252,11 @@ class AllEventsAdapter(context: Context) : RecyclerView.Adapter<RecyclerView.Vie
 
 }
 
-sealed class Item {
-}
+internal sealed class Item
 
-data class EventItem(val event: Event, val person: Person) : Item() {
-}
+internal data class EventItem(val event: Event, val person: Person) : Item()
 
-data class MonthItem(val id: Int, val name: String) : Item() {
-}
+internal data class MonthItem(val id: Int, val name: String) : Item()
 
 internal class ItemsComparator : Comparator<Item> {
     override fun compare(left: Item?, right: Item?): Int {

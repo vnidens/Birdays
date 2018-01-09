@@ -12,10 +12,13 @@ import butterknife.ButterKnife
 import butterknife.Unbinder
 import com.djonique.birdays.R
 import com.djonique.birdays.adapters.AllEventsAdapter
+import com.djonique.birdays.adapters.EventsAdapter
 import com.djonique.birdays.database.AppDatabase
 import com.djonique.birdays.model.Event
 import com.djonique.birdays.model.Person
+import com.djonique.birdays.utils.disposeIfNot
 import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.Disposable
 
 /**
  * Birdays
@@ -48,8 +51,8 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 
 class AllEventsFragment
     : Fragment(),
-        AllEventsAdapter.OnItemClickListener,
-        AllEventsAdapter.OnItemLongClickListener{
+        EventsAdapter.OnEventSelectedListener,
+        AllEventsAdapter.OnItemLongClickListener {
 
     @BindView(R.id.recyclerView)
     lateinit var recyclerView: RecyclerView
@@ -57,6 +60,8 @@ class AllEventsFragment
     private var unbinder: Unbinder? = null
 
     private lateinit var adapter: AllEventsAdapter
+
+    private var loadPeopleSubscription: Disposable? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.fragment_recycler_view, container, false)
@@ -71,10 +76,43 @@ class AllEventsFragment
         return v
     }
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        loadPersons()
+    }
+
     override fun onStart() {
         super.onStart()
 
-        context?.let {
+        if(adapter.itemCount == 0) {
+            loadPersons()
+        }
+    }
+
+    override fun onStop() {
+        super.onStop()
+
+        loadPeopleSubscription.disposeIfNot()
+    }
+
+    override fun onDestroyView() {
+        unbinder?.unbind()
+        super.onDestroyView()
+    }
+
+    override fun onEventSelected(event: Event, person: Person) {
+        //TODO:
+    }
+
+    override fun onItemLongClick(event: Event, person: Person) {
+        //TODO: ask to delete event or person
+    }
+
+    private fun loadPersons() {
+        loadPeopleSubscription.disposeIfNot()
+
+        loadPeopleSubscription = context!!.let {
             AppDatabase.instance(it)
                     .getPersons()
                     .observeOn(AndroidSchedulers.mainThread())
@@ -85,22 +123,5 @@ class AllEventsFragment
                             { t -> t.printStackTrace() }
                     )
         }
-    }
-
-    override fun onStop() {
-        super.onStop()
-    }
-
-    override fun onDestroyView() {
-        unbinder?.unbind()
-        super.onDestroyView()
-    }
-
-    override fun onItemClick(event: Event, person: Person) {
-        //TODO: start activity with event information
-    }
-
-    override fun onItemLongClick(event: Event, person: Person) {
-        //TODO: ask to delete event or person
     }
 }

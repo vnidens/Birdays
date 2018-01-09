@@ -192,4 +192,10 @@
     <string name="show_button">Показать</string>
     <string name="help_email_description">Если уведомления по-прежнему не приходят, пожалуйста, напишите мне на почту birdaysapp@gmail.com</string>
     <string name="send_email">Отправить письмо</string>
+
+    <string name="anniversary">Годовщина</string>
+    <string name="event">Событие</string>
+    <string name="celebrates_event_name">празднует %s</string>
+    <string name="marks_event_name">отмечает %s</string>
+    <string name="upcoming">Скоро</string>
 </resources>
