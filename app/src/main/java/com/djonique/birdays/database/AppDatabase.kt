@@ -7,6 +7,7 @@ import android.arch.persistence.room.TypeConverters
 import android.content.Context
 import com.djonique.birdays.model.Event
 import com.djonique.birdays.model.Person
+import com.djonique.birdays.utils.daysTo
 import io.reactivex.Flowable
 
 /**
@@ -75,6 +76,30 @@ abstract class AppDatabase : RoomDatabase() {
                         person.events.addAll(eventsDao.getEventsForPersonId(person.id))
                     }
                 }
+    }
+
+    fun getUpcomingEvents(): Flowable<List<Event>> {
+        return eventsDao.getEvents()
+                .flatMap {
+                    Flowable.just(
+                            it.filter { it.date.daysTo() <= 31 }
+                                    .toList()
+                    )
+                }
+                .doOnNext { events ->
+                    events.forEach { event ->
+                        event.person = personsDao.getPersonById(event.personId)
+                    }
+                }
+    }
+
+    fun insert(person: Person) {
+        person.id = personsDao.insert(person)
+
+        person.events.forEach {
+            it.personId = person.id
+            it.id = eventsDao.insert(it)
+        }
     }
 
 }

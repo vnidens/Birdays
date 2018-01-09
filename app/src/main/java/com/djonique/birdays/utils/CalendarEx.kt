@@ -1,6 +1,7 @@
 package com.djonique.birdays.utils
 
 import java.util.*
+import java.util.concurrent.TimeUnit
 
 /**
  * Birdays
@@ -31,11 +32,20 @@ import java.util.*
  * SOFTWARE.
  */
 
-val Calendar.year: Int
+var Calendar.year: Int
     get() = get(Calendar.YEAR)
+    set(value) {
+        set(Calendar.YEAR, value)
+    }
 
 val Calendar.month: Int
     get() = get(Calendar.MONTH)
 
 val Calendar.day: Int
     get() = get(Calendar.DAY_OF_MONTH)
+
+fun Calendar.daysTo(other: Calendar): Int
+        = TimeUnit.MILLISECONDS.toDays(other.timeInMillis - timeInMillis).toInt()
+
+fun Calendar.daysTo(): Int
+        = Calendar.getInstance().daysTo(this)

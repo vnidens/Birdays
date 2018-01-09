@@ -59,9 +59,7 @@ interface EventsDao {
     @Query("SELECT * FROM Events WHERE personId=:arg0")
     fun getEventsForPersonIdObservable(arg0: Long): Flowable<List<Event>>
 
-//    @Query("SELECT * FROM Events")
-//    fun getEvents(): Flowable<List<Event>>
-//
-//    @Query("SELECT * from Persons WHERE providerId=:id")
-//    fun getPersonByProviderId(id: Long): Maybe<Event>
+    @Query("SELECT * FROM Events")
+    fun getEvents(): Flowable<List<Event>>
+
 }

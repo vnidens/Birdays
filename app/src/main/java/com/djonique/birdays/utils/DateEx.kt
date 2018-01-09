@@ -45,3 +45,25 @@ fun Date.day(): Int = Calendar.getInstance().let {
         it.time = this
         it.day
     }
+
+fun Date.daysTo(other: Date): Int {
+    val thisCal = Calendar.getInstance()
+    val otherCal = Calendar.getInstance().apply {
+        time = other
+        set(Calendar.HOUR_OF_DAY, 10)
+    }
+
+    thisCal.time = this
+    thisCal.set(Calendar.HOUR_OF_DAY, 9)
+
+    if(thisCal.month < otherCal.month
+            || (thisCal.month == otherCal.month && thisCal.day <= otherCal.day)) {
+        otherCal.year = thisCal.year
+    } else {
+        otherCal.year = thisCal.year + 1
+    }
+
+    return thisCal.daysTo(otherCal)
+}
+
+fun Date.daysTo(): Int = Calendar.getInstance().time.daysTo(this)

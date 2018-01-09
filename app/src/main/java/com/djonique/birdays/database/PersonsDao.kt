@@ -3,7 +3,6 @@ package com.djonique.birdays.database
 import android.arch.persistence.room.*
 import com.djonique.birdays.model.Person
 import io.reactivex.Flowable
-import io.reactivex.Maybe
 
 /**
  * Birdays
@@ -57,9 +56,12 @@ interface PersonsDao {
     @Query("SELECT * FROM Persons")
     fun getPersons(): Flowable<List<Person>>
 
+    @Query("SELECT * from Persons WHERE id=:arg0")
+    fun getPersonById(arg0: Long): Person?
+
     @Query("SELECT * from Persons WHERE providerId=:arg0")
-    fun getPersonByProviderId(arg0: Long): Maybe<Person>
+    fun getPersonByProviderId(arg0: Long): Person?
 
     @Query("SELECT * from Persons WHERE name=:arg0")
-    fun getPersonByName(arg0: String): Maybe<Person>
+    fun getPersonByName(arg0: String): Person?
 }

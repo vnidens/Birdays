@@ -39,6 +39,7 @@ public interface Constants {
     String RINGTONE_KEY = "ringtone_key";
     String NIGHT_MODE_KEY = "night_mode_key";
     String DISPLAYED_AGE_KEY = "displayed_age_key";
+    String DISPLAYED_TABS_KEY = "displayed_tabs";
 
     // Intents
     String TYPE_EMAIL = "message/rfc822";
