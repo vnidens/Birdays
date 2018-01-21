@@ -24,33 +24,33 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.view.ViewGroup;
 
 import com.djonique.birdays.R;
-import com.djonique.birdays.fragments.AllFragment;
-import com.djonique.birdays.fragments.MonthFragment;
+import com.djonique.birdays.fragments.AllEventsFragment;
+import com.djonique.birdays.fragments.UpcomingEventsFragment;
 import com.djonique.birdays.models.Person;
 
-import java.util.Calendar;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PagerAdapter extends FragmentPagerAdapter {
 
-    private Context context;
-    private MonthFragment monthFragment;
-    private AllFragment allFragment;
+    private AllEventsFragment allEventsFragment;
+    private UpcomingEventsFragment upcomingEventsFragment;
+    private List<String> tabsTitles = new ArrayList<>(2);
+    private List<Fragment> fragments = new ArrayList<>(2);
 
     public PagerAdapter(FragmentManager fm, Context context) {
         super(fm);
-        this.context = context;
+
+        tabsTitles.add(context.getString(R.string.all));
+        tabsTitles.add(context.getString(R.string.upcoming));
+
+        fragments.add(new AllEventsFragment());
+        fragments.add(new UpcomingEventsFragment());
     }
 
     @Override
     public Fragment getItem(int position) {
-        switch (position) {
-            case 0:
-                return new MonthFragment();
-            case 1:
-                return new AllFragment();
-            default:
-                return null;
-        }
+        return fragments.get(position);
     }
 
     @Override
@@ -60,70 +60,37 @@ public class PagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 2;
+        return tabsTitles.size();
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        switch (position) {
-            case 0:
-                return getMonth();
-            case 1:
-                return context.getString(R.string.all);
-        }
-        return null;
+        return tabsTitles.get(position);
     }
 
     @NonNull
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         Fragment createdFragment = (Fragment) super.instantiateItem(container, position);
-        switch (position) {
-            case 0:
-                monthFragment = ((MonthFragment) createdFragment);
-                break;
-            case 1:
-                allFragment = ((AllFragment) createdFragment);
-                break;
+
+        if(createdFragment instanceof AllEventsFragment) {
+            allEventsFragment = ((AllEventsFragment)createdFragment);
+        } else if(createdFragment instanceof UpcomingEventsFragment) {
+            upcomingEventsFragment = (UpcomingEventsFragment)createdFragment;
         }
+
         return createdFragment;
     }
 
-    private String getMonth() {
-        String[] months = context.getResources().getStringArray(R.array.months);
-        return months[Calendar.getInstance().get(Calendar.MONTH)];
-    }
-
     public void search(String text) {
-        if (allFragment != null) {
-            allFragment.findPerson(text);
-        }
-        if (monthFragment != null) {
-            monthFragment.findPerson(text);
-        }
     }
 
     public void addPersonsFromDb() {
-        if (monthFragment != null) {
-            monthFragment.addMonthPersonsFromDb();
-        }
-        if (allFragment != null) {
-            allFragment.addAllPersonsFromDb();
-        }
     }
 
     public void addPerson(Person person) {
-        if (monthFragment != null) {
-            monthFragment.addPerson(person);
-        }
-        if (allFragment != null) {
-            allFragment.addPerson(person, true);
-        }
     }
 
     public void deletePerson(long timeStamp) {
-        if (monthFragment != null) {
-            monthFragment.deleteRecord(timeStamp);
-        }
     }
 }
