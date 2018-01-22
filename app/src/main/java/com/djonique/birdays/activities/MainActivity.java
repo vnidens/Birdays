@@ -39,6 +39,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.crashlytics.android.Crashlytics;
+import com.djonique.birdays.EventsApplication;
 import com.djonique.birdays.R;
 import com.djonique.birdays.ad.Ad;
 import com.djonique.birdays.adapters.PagerAdapter;
@@ -49,15 +50,20 @@ import com.djonique.birdays.models.Person;
 import com.djonique.birdays.utils.BirdaysApplication;
 import com.djonique.birdays.utils.Constants;
 import com.djonique.birdays.utils.ContactsHelper;
+import com.djonique.birdays.utils.ContactsUpdater;
+import com.djonique.birdays.utils.PermissionManager;
 import com.djonique.birdays.utils.Utils;
 import com.google.android.gms.ads.AdView;
 import com.google.firebase.analytics.FirebaseAnalytics;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.OnPageChange;
 import io.fabric.sdk.android.Fabric;
+import io.reactivex.android.schedulers.AndroidSchedulers;
 
 public class MainActivity extends AppCompatActivity implements
         NewPersonDialogFragment.AddingPersonListener,
@@ -89,6 +95,9 @@ public class MainActivity extends AppCompatActivity implements
     private SharedPreferences preferences;
     private PagerAdapter pagerAdapter;
 
+    @Inject
+    ContactsUpdater contactsUpdater;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,6 +105,8 @@ public class MainActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         FirebaseAnalytics.getInstance(this);
+
+        EventsApplication.Companion.getInstance().getContactsComponent().inject(this);
 
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -111,8 +122,13 @@ public class MainActivity extends AppCompatActivity implements
         viewPager.setOffscreenPageLimit(2);
         tabLayout.setupWithViewPager(viewPager);
 
-        if (!preferences.getBoolean(Constants.CONTACTS_UPLOADED, false)) {
-            new ContactsHelper(this, getContentResolver()).loadContacts(preferences);
+        if(PermissionManager.readingContactsPermissionGranted(this)){
+            contactsUpdater
+                    .updateContacts()
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe();
+        } else {
+            PermissionManager.requestReadingContactsPermission(this);
         }
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -132,8 +148,6 @@ public class MainActivity extends AppCompatActivity implements
             Ad.showBannerAd(container, adView, fab);
         }
 
-        // App starts from AllFragment
-        viewPager.setCurrentItem(1);
     }
 
     @Override
@@ -208,7 +222,10 @@ public class MainActivity extends AppCompatActivity implements
             if (grantResults.length > 0
                     && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 if (!preferences.getBoolean(Constants.WRONG_CONTACTS_FORMAT, false)) {
-                    new ContactsHelper(this, getContentResolver()).loadContacts(preferences);
+                    contactsUpdater
+                            .updateContacts()
+                            .observeOn(AndroidSchedulers.mainThread())
+                            .subscribe();
                 }
             } else {
                 Snackbar.make(container, R.string.permission_required,
