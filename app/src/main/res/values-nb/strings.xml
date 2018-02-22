@@ -17,192 +17,191 @@
 -->
 
 <resources>
-    <string name="build_version">Sürüm</string>
+    <string name="build_version">Versjon</string>
 
     <!-- MainActivity -->
-    <string name="loading_contacts">Kişiler yükleniyor…</string>
-    <string name="contacts_uploaded">Kişiler yüklendi</string>
-    <string name="loading_contacts_error">Kişiler içe aktarılamadı, yanlış tarih biçimi</string>
-    <string name="permission_required">Kişileri eklemek için izin gerekiyor</string>
-    <string name="snackbar_allow_text">İzin ver</string>
-    <string name="all">Tüm</string>
-    <string name="famous">Ünlü</string>
-    <string name="age">Geçerli Yaş:\u0020</string>
-    <string name="happy_birthday">Doğum Günün Kutlu Olsun!</string>
-    <string name="web_search_error">İşlem yapılamadı, lütfen web tarayıcısı yükleyin</string>
-    <string name="delete_record_text">Bu kaydı silmek istediğinizden eminmisiniz:\u0020</string>
-    <string name="record_deleted">Kayıt silindi</string>
-    <string name="undo">Geri al</string>
+    <string name="loading_contacts">Laster opp kontakter…</string>
+    <string name="contacts_uploaded">Kontakter opplastet</string>
+    <string name="loading_contacts_error">Kunne ikke importere kontakter, ugyldig datoformat</string>
+    <string name="permission_required">Tillatelse kreves for å importere kontakter</string>
+    <string name="snackbar_allow_text">Tillat</string>
+    <string name="all">Alle</string>
+    <string name="famous">Berømte</string>
+    <string name="age">Alder:\u0020</string>
+    <string name="happy_birthday">Gratulerer med dagen!</string>
+    <string name="web_search_error">Kunne ikke utføre handling, vennligst installér nettleseren</string>
+    <string name="delete_record_text">Er du sikker på at du vil slette denne lappen:\u0020</string>
+    <string name="record_deleted">Lapp slettet</string>
+    <string name="undo">Angre</string>
 
-    <string name="january">Ocak</string>
-    <string name="february">Şubat</string>
-    <string name="march">Mart</string>
-    <string name="april">Nisan</string>
-    <string name="may">Mayıs</string>
-    <string name="june">Haziran</string>
-    <string name="july">Temmuz</string>
-    <string name="august">Ağustos</string>
-    <string name="september">Eylül</string>
-    <string name="october">Ekim</string>
-    <string name="november">Kasım</string>
-    <string name="december">Aralık</string>
+    <string-array name="months">
+        <item>Januar</item>
+        <item>Februar</item>
+        <item>Mars</item>
+        <item>April</item>
+        <item>Mai</item>
+        <item>Juni</item>
+        <item>Juli</item>
+        <item>August</item>
+        <item>September</item>
+        <item>Oktober</item>
+        <item>November</item>
+        <item>Desember</item>
+    </string-array>
 
     <!-- Menu -->
-    <string name="action_sync">Senkronizasyon</string>
-    <string name="action_settings">Ayarlar</string>
-    <string name="action_delete">Sil</string>
+    <string name="action_sync">Synkronisering</string>
+    <string name="action_settings">Innstillinger</string>
+    <string name="action_delete">Slett</string>
 
     <!-- NewPersonDialogFragment -->
-    <string name="new_record">Yeni kayıt</string>
-    <string name="add_from_contacts">Kişilerden ekle</string>
-    <string name="open_contacts_error">Cihaz özellikleri nedeniyle işlem yapılamıyor</string>
-    <string name="name">Adı</string>
-    <string name="error_hint">Lütfen bir ad girin</string>
-    <string name="phone_number">Telefon Numarası</string>
-    <string name="pick_date">Tarih Seç</string>
-    <string name="wrong_date">Yanlış tarih</string>
-    <string name="year_unknown">Yılı bilmiyorum</string>
-    <string name="cancel_button">Iptal</string>
-    <string name="record_added">Kayıt eklendi</string>
+    <string name="new_record">Ny lapp</string>
+    <string name="add_from_contacts">Legg til fra kontakter</string>
+    <string name="open_contacts_error">Kunne ikke utføre handling grunnet enhetsfunksjoner</string>
+    <string name="name">Navn</string>
+    <string name="error_hint">Vennligst skriv inn navnet</string>
+    <string name="phone_number">Telefonnummer</string>
+    <string name="pick_date">Velg dato</string>
+    <string name="wrong_date">Feil dato</string>
+    <string name="year_unknown">Jeg kan ikke året</string>
+    <string name="cancel_button">Avbryt</string>
+    <string name="record_added">Lapp lagt til</string>
 
     <!-- DetailActivity -->
-    <string name="birthday">Doğum Günü</string>
-    <string name="days_left">Bir sonraki doğumgününe kadarki günler</string>
-    <string name="today">Bugün</string>
-    <string name="days_since_birth">Doğumdan beri</string>
-    <string name="zodiac_sign">Burç</string>
-    <string name="season_picture">Sezon resmi</string>
-    <string name="calendar">Takvim</string>
-    <string name="call">Ara</string>
-    <string name="chat">Sohbet</string>
-    <string name="born_on_this_day">Bu gün doğan</string>
+    <string name="birthday">Bursdag</string>
+    <string name="days_left">Dager til neste bursdag</string>
+    <string name="today">I dag</string>
+    <string name="days_since_birth">Dager siden fødsel</string>
+    <string name="zodiac_sign">Stjernetegn</string>
+    <string name="season_picture">Årstidbilde</string>
+    <string name="calendar">Kalender</string>
+    <string name="call">Ring</string>
+    <string name="chat">Chat</string>
+    <string name="born_on_this_day">Født på denne dagen</string>
 
     <!-- EditActivity -->
-    <string name="editing_label">Düzenleme</string>
-    <string name="record_edited">Kayıt düzenlendi</string>
+    <string name="editing_label">Redigering</string>
+    <string name="record_edited">Lapp redigert</string>
 
     <!-- Alarm -->
-    <string name="security_exception">SecurityException, Samsung cihazlar kayıt olabilirsiniz alarm sayısını kısıtlayın</string>
-    <string name="channel_name">Doğum Günleri</string>
+    <string name="security_exception">SecurityException, Samsung-enheter begrenser antallet numre og alarmer du kan registrere</string>
+    <string name="channel_name">Bursdager</string>
 
     <!-- Zodiac signs -->
-    <string name="aries">Koç</string>
-    <string name="taurus">Boğa</string>
-    <string name="gemini">İkizler</string>
-    <string name="cancer">Yengeç</string>
-    <string name="leo">Aslan</string>
-    <string name="virgo">Başak</string>
-    <string name="libra">Terazi</string>
-    <string name="scorpio">Akrep</string>
-    <string name="sagittarius">Yay</string>
-    <string name="capricorn">Oğlak</string>
-    <string name="aquarius">Kova</string>
-    <string name="pisces">Balık</string>
+    <string name="aries">Væren</string>
+    <string name="taurus">Tyren</string>
+    <string name="gemini">Tvillingene</string>
+    <string name="cancer">Krepsen</string>
+    <string name="leo">Løven</string>
+    <string name="virgo">Jomfruen</string>
+    <string name="libra">Vekten</string>
+    <string name="scorpio">Skorpionen</string>
+    <string name="sagittarius">Skytten</string>
+    <string name="capricorn">Steinbukken</string>
+    <string name="aquarius">Vannmannen</string>
+    <string name="pisces">Fiskene</string>
 
     <!-- SettingsActivity -->
-    <string name="optimization_enabled">En iyi duruma getirme etkin!</string>
-    <string name="optimization_description">\nSürüm 6.0 ile Android, arka plan CPU\'yu optimize ederek uygulamaların davranışını etkileyen güç tasarrufu modu Doze\'yi tanıttı.\n\nUygulamayı doğru bir şekilde gerçekleştirmek için Birdays için optimizasyonun kapatılması gerekir.</string>
-    <string name="do_not_show_again">Bir daha gösterme</string>
-    <string name="disable_button">Devre Dışı Bırak</string>
+    <string name="optimization_enabled">Optimalisering aktivert!</string>
+    <string name="optimization_description">\nFra og med versjon 6.0, introduserte Android strømsparingsmodusen Doze som holder styr på appers oppførsel ved å utsette bakgrunns-CPU.\n\nFor å få appen til å virke normalt, deaktivér optimalisering av Birdays.</string>
+    <string name="do_not_show_again">Ikke vis dette igjen</string>
+    <string name="disable_button">Deaktivér</string>
     <!-- Notifications -->
-    <string name="notifications">Bildirimler</string>
-    <string name="allow_notification">Uygulamaya yaklaşan doğum günleri bildirimlerini göndermeye izin ver</string>
-    <string name="notifications_time">Bildirim zamanı</string>
-    <string name="additional_notification">Ek bildirim</string>
+    <string name="notifications">Varslinger</string>
+    <string name="allow_notification">Tillat appen å sende varslinger om kommende bursdager</string>
+    <string name="notifications_time">Varslingsklokkeslett</string>
+    <string name="additional_notification">Ytterlig varsling</string>
 
     <string-array name="additional_notification_entries">
-        <item>Hiçbir zaman</item>
-        <item>1 gün önce</item>
-        <item>2 gün önce</item>
-        <item>3 gün önce</item>
-        <item>1 hafta önce</item>
-        <item>2 hafta önce</item>
+        <item>Aldri</item>
+        <item>1 dag før</item>
+        <item>2 dager før</item>
+        <item>3 dager før</item>
+        <item>1 uke før</item>
+        <item>2 uker før</item>
     </string-array>
 
     <string-array name="additional_notification_delay">
-        <item>Bugün</item>
-        <item>Yarın</item>
-        <item>2 gün içinde</item>
-        <item>3 gün içinde</item>
-        <item>Bir hafta içinde</item>
-        <item>2 hafta içinde</item>
+        <item>I dag</item>
+        <item>I morgen</item>
+        <item>Om 2 dager</item>
+        <item>Om 3 dager</item>
+        <item>Om 1 uke</item>
+        <item>Om 2 uker</item>
     </string-array>
 
-    <string name="notification_tone">Bildirim sesi</string>
-    <string name="ringtone_summary">Bildirim için bir ses seçin. Cihaz ayarlarından varsayılan olarak ton kullanılır</string>
-    <string name="silent">Yok</string>
-    <string name="help">Yardım</string>
-    <string name="tap_here">Bildirimleri almadıysanız, buraya dokunun</string>
+    <string name="notification_tone">Varslingstone</string>
+    <string name="ringtone_summary">Velg en tone til varslingen. Standard er tonen fra enhetsinnstillingene</string>
+    <string name="silent">Ingen</string>
+    <string name="help">Hjelp</string>
+    <string name="tap_here">Trykk her hvis du ikke mottar varslinger</string>
     <!-- Synchronization and backup -->
-    <string name="sync_and_backup">Senkronizasyon ve yedekleme</string>
-    <string name="contacts_import_title">Kişileri içe aktar</string>
-    <string name="contacts_import_summary">(ISO 8601 destekler), aygıtınızdan kişileri almak için buraya dokunun</string>
-    <string name="export_records">Verme kayıtları (Beta)</string>
-    <string name="export_records_summary">Yedekleme ile XML dosyasını oluştur</string>
-    <string name="ext_storage_error">Harici depolama mevcut değil</string>
-    <string name="exporting_records">Kayıtları dışa aktarılıyor…</string>
-    <string name="backup_finished">Yedek tamamlandı, XML dosyasında the\u0020</string>
-    <string name="recover_records">Kayıtları iyileştir (Beta)</string>
-    <string name="recover_records_summary">Yedekleme ile XML dosyasını seçin</string>
-    <string name="recover_records_error">İşlem yapılamadı, lütfen web tarayıcısı yükleyin</string>
-    <string name="records_recovered">Kayıtları kurtarıldı</string>
+    <string name="sync_and_backup">Synkronisering og sikkerhetskopiering</string>
+    <string name="contacts_import_title">Importér kontakter</string>
+    <string name="contacts_import_summary">Trykk her for å importere kontaktene fra enheten din (støtter ISO 8601)</string>
+    <string name="export_records">Overfør lapper (Beta)</string>
+    <string name="export_records_summary">Lag XML-filen med sikkerhetskopi</string>
+    <string name="ext_storage_error">Ekstern lagring er ikke tilgjengelig</string>
+    <string name="exporting_records">Overfører lapper…</string>
+    <string name="backup_finished">Sikkerhetskopi fullført, XML-filen er i\u0020</string>
+    <string name="recover_records">Gjenopprett lapper (Beta)</string>
+    <string name="recover_records_summary">Velg XML-filen med sikkerhetskopi</string>
+    <string name="recover_records_error">Kunne ikke utføre handling, vennligst installér filbehandleren</string>
+    <string name="records_recovered">Lapper gjenopprettet</string>
     <!-- General -->
-    <string name="general">Genel</string>
-    <string name="night_mode">Gece modu</string>
-    <string name="start_page">Başlangıç sayfası</string>
+    <string name="general">Generelt</string>
+    <string name="night_mode">Nattmodus</string>
+    <string name="start_page">Startside</string>
 
     <string-array name="start_page_entries">
-        <item>Cari ay</item>
-        <item>Tüm</item>
-        <item>Ünlü</item>
+        <item>Nåværende måned</item>
+        <item>Alle</item>
+        <item>Berømte</item>
     </string-array>
 
-    <string name="displayed_age">Görüntülenen yaş</string>
+    <string name="displayed_age">Vist alder</string>
 
     <string-array name="displayed_age_entries">
-        <item>Mevcut</item>
-        <item>Gelecek</item>
+        <item>Nåværende</item>
+        <item>Fremtidige</item>
     </string-array>
 
-    <string name="displayed_age_changes">Bu değişikliklerin etkili olabilmesi için uygulamayı yeniden başlatmalısın</string>
-    <string name="restart_now">Şimdi yeniden başlat</string>
-    <string name="later">Daha Sonra</string>
-    <string name="rate_app">Bizi değerlendirin</string>
-    <string name="share_app">Uygulamayi paylaş</string>
-    <string name="share_text">Doğum günlerinde akrabalarınızı, arkadaşlarınızı ve meslektaşlarınızı tebrik etmeyi unuttunuz mu? Birdays size önemli bir tatil hatırlatacaktır!\n\n</string>
+    <string name="displayed_age_changes">Du må omstarte appen for å merke disse effektene</string>
+    <string name="restart_now">Omstart nå</string>
+    <string name="later">Senere</string>
+    <string name="rate_app">Vurdér appen</string>
+    <string name="share_app">Del</string>
+    <string name="share_text">Glemmer du å gratulere slektninger, venner eller kolleger med dagen? Birdays vil hjelpe deg med å huske en viktig høytid!\n\n</string>
     <!-- Advertising -->
-    <string name="advertising">Reklam</string>
-    <string name="about_ad_title">Neden reklamları görüyorum?</string>
-    <string name="about_ad_summary">Reklam gelirleri, projenin geliştirilmesine ve diğer dillere çevirmeye gider. Reklamları ücretsiz kaldırabilirsiniz</string>
-    <string name="ad_interstitial_title">Arada açılan reklam</string>
-    <string name="ad_interstitial_summary">Bu tür bir reklam günde 1 gösteri ile sınırlıdır. Çok sık değil, değil mi?</string>
-    <string name="ad_banner">Afiş</string>
+    <string name="advertising">Reklamering</string>
+    <string name="about_ad_title">Hvorfor ser jeg annonser?</string>
+    <string name="about_ad_summary">Inntektene fra reklameringen går til utviklingen av prosjektet og oversettelse av det til andre språk. Du kan fjerne annonser helt gratis</string>
+    <string name="ad_interstitial_title">Interstitiell annonse</string>
+    <string name="ad_interstitial_summary">Denne typen annonse er begrenset til 1 visning om dagen. Ikke så ofte, eller?</string>
+    <string name="ad_banner">Banner</string>
     <!-- About app -->
-    <string name="about_app">Uygulama hakkında</string>
-    <string name="menu_github">Kaynak kodu</string>
-    <string name="privacy_policy">Gizlilik Politikası</string>
-    <string name="software_licenses">Açık kaynak lisanslar</string>
-    <string name="licenses">Lisanslar</string>
+    <string name="about_app">Om appen</string>
+    <string name="menu_github">Kildekode</string>
+    <string name="privacy_policy">Personvern</string>
+    <string name="software_licenses">Open-source-lisenser</string>
+    <string name="licenses">Lisenser</string>
 
     <!-- HelpActivity -->
-    <string name="help_header">Neden alarm çalışmıyor?</string>
-    <string name="help_description">Bazı cihazlarda, uygulama arka planı işlemlerini engelleyebilecek veya uygulamanın başlangıçta çalışmasını engelleyebilecek Güç Tasarruf Modu vardır.\nArama işini doğru yapmak için aşağıdaki birkaç basit adımı uygulayın:\n\n1. Birdays uygulaması için bildirimlerin etkinleştirildiğinden emin olun (Ayarlar > Uygulamalar > Birdays).\n\n2. Uygulama arka plan işlemlerini engelleyebilecek görev yöneticileri, görev katilleri veya RAM iyileştiricileri (ör. «Battery Saver», «Clean Master») yüklediyseniz, Beyaz listelerine Birdays ekleyin.\n \n3. Güç tasarrufu modunu kapatın veya Beyaz listedeki Birdays\'i ekleyin (Ayarlar > Pil > Pil optimizasyonu). \nYalnızca Android 6.0 (Marshmallow) veya daha üst bir sürümü çalıştıran cihazlar için.</string>
-    <string name="help_whitelist">Beyaz listeyi aç</string>
-    <string name="help_whitelist_error">Yalnızca Android 6.0 (Marshmallow) veya daha üst bir sürümü çalıştıran cihazlar için</string>
-    <string name="help_delay_text">Unutmayın ki bazı cihazlarda bildirimler gecikme yaşayabilir.</string>
-    <string name="help_settings">Ayarlara git</string>
-    <string name="huawei_header">Huawei sahipleri için</string>
-    <string name="huawei_description">«Ayarlar» ı açın, «Güç tasarrufu» nu seçin ve «Korunan uygulamalar» ı açın. Birdays için bu ayarın açık olduğundan emin olun.</string>
-    <string name="samsung_header">Samsung sahipleri için</string>
-    <string name="samsung_description">«Smart Manager», «Pil» ve sonra «Ayrinti» dokunun. Birdays app için bu özelliği devre dışı bırakın.</string>
-    <string name="xiaomi_header">Huawei sahipleri için</string>
-    <string name="xiaomi_description">«Ayarlar» \'ı açın, «Pil», ardından «Uygulamalarin pil kullanimini yönet» ve «Uygulamaları seçin» seçeneğini açın, Birdays için «Kısıtlama yok» seçeneğini seçin.</string>
-    <string name="show_button">Dizi</string>
-    <string name="help_email_description">Alarm hala çalışmıyorsa, lütfen bana birdaysapp@gmail.com ulaşın</string>
-<<<<<<< HEAD
-    <string name="send_email">E-posta gönder</string>
-=======
-    <string name="send_email">Eposta gönder</string>
+    <string name="help_header">Hvorfor virker ikke alarmen?</string>
+    <string name="help_description">Noen enheter har en strømsparingsmodus som kan blokkere appens bakgrunnsaktivitet eller hindre den fra å kjøre ved oppstart.\nFor å få alarmen til å virke ordentlig, utfør de enkle stegene under:\n\n1. Sørg for at varslinger er skrudd på for Birdays-appen (Innstillinger > Apper > Birdays).\n\n2. Hvis du har installert oppgavebehandling, oppdragsmorder eller RAM-optimalisering (f.eks. «Battery Saver», «Clean Master»), noe som også kan blokkere bakgrunnsaktivitet, legg Birdays til hvitelisten deres.\n\n3. Skru av strømsparingsmodusen din eller legg Birdays til hvitelisten (Innstillinger > Batteri > Batterioptimalisering).\nKun for enheter som kjører Android 6.0 (Marshmallow) eller høyere.</string>
+    <string name="help_whitelist">Åpne hviteliste</string>
+    <string name="help_whitelist_error">Kun for enheter som kjører Android 6.0 (Marshmallow) eller høyere</string>
+    <string name="help_delay_text">Vennligst vær oppmerksom på at varslinger kan virke med litt forsinkelse på noen enheter.</string>
+    <string name="help_settings">Åpne innstillinger</string>
+    <string name="huawei_header">For Huawei-brukere</string>
+    <string name="huawei_description">Åpne enhets «Innstillinger», gå til «Strømsparing» og åpne «Beskyttede apper». Sørg for at denne funksjonen er aktivert for Birdays.</string>
+    <string name="samsung_header">For Samsung-brukere</string>
+    <string name="samsung_description">Åpne «Smart Manager», trykk på «Batteri», så «Info». Deaktivér denne funksjonen for Birdays-appen.</string>
+    <string name="xiaomi_header">For Xiaomi-brukere</string>
+    <string name="xiaomi_description">Åpne enhets «Innstillinger», gå til «Batteri &amp; ytelse», så «Behandle appers batteriforbruk», åpne «Velg apper», velg «Ingen restriksjoner» for Birdays.</string>
+    <string name="show_button">Vis</string>
+    <string name="help_email_description">Hvis alarmen ikke virker, vennligst kontakt meg via birdaysapp@gmail.com (Engelsk)</string>
+    <string name="send_email">Send e-post</string>
 
     <!-- Famous persons -->
     <!-- 1 january -->
@@ -2862,5 +2861,4 @@
     <string name="kingsley">Ben Kingsley</string>
     <string name="willis">Connie Willis</string>
     <string name="val_kilmer">Val Kilmer</string>
->>>>>>> master
 </resources>

@@ -17,192 +17,191 @@
 -->
 
 <resources>
-    <string name="build_version">Sürüm</string>
+    <string name="build_version">Bersyon ng pagkakagawa</string>
 
     <!-- MainActivity -->
-    <string name="loading_contacts">Kişiler yükleniyor…</string>
-    <string name="contacts_uploaded">Kişiler yüklendi</string>
-    <string name="loading_contacts_error">Kişiler içe aktarılamadı, yanlış tarih biçimi</string>
-    <string name="permission_required">Kişileri eklemek için izin gerekiyor</string>
-    <string name="snackbar_allow_text">İzin ver</string>
-    <string name="all">Tüm</string>
-    <string name="famous">Ünlü</string>
-    <string name="age">Geçerli Yaş:\u0020</string>
-    <string name="happy_birthday">Doğum Günün Kutlu Olsun!</string>
-    <string name="web_search_error">İşlem yapılamadı, lütfen web tarayıcısı yükleyin</string>
-    <string name="delete_record_text">Bu kaydı silmek istediğinizden eminmisiniz:\u0020</string>
-    <string name="record_deleted">Kayıt silindi</string>
-    <string name="undo">Geri al</string>
+    <string name="loading_contacts">Iniloload ang mga kontak…</string>
+    <string name="contacts_uploaded">Ang mga kontak ay na i-upload na</string>
+    <string name="loading_contacts_error">Hindi ma i-import ang mga kontak, hindi naka-standard ang pormat</string>
+    <string name="permission_required">Permiso ay kinakailangan para ma-import ang mga kontak</string>
+    <string name="snackbar_allow_text">I-allow</string>
+    <string name="all">Lahat</string>
+    <string name="famous">Tanyag</string>
+    <string name="age">Kasalukuyang edad:\u0020</string>
+    <string name="happy_birthday">Maligayang kaarawan!</string>
+    <string name="web_search_error">Hindi maisagawa ang aksyon, pakiusap i-install ang web browser</string>
+    <string name="delete_record_text">Sigurado ka bang gusto mong burahin itong talaan:\u0020</string>
+    <string name="record_deleted">Na bura na ang talaan</string>
+    <string name="undo">I-undo</string>
 
-    <string name="january">Ocak</string>
-    <string name="february">Şubat</string>
-    <string name="march">Mart</string>
-    <string name="april">Nisan</string>
-    <string name="may">Mayıs</string>
-    <string name="june">Haziran</string>
-    <string name="july">Temmuz</string>
-    <string name="august">Ağustos</string>
-    <string name="september">Eylül</string>
-    <string name="october">Ekim</string>
-    <string name="november">Kasım</string>
-    <string name="december">Aralık</string>
+    <string-array name="months">
+        <item>Enero</item>
+        <item>Pebrero</item>
+        <item>Marso</item>
+        <item>Abril</item>
+        <item>Mayo</item>
+        <item>Hunyo</item>
+        <item>Hulyo</item>
+        <item>Agosto</item>
+        <item>Setyembre</item>
+        <item>Oktubre</item>
+        <item>Nobyembre</item>
+        <item>Disyembre</item>
+    </string-array>
 
     <!-- Menu -->
-    <string name="action_sync">Senkronizasyon</string>
-    <string name="action_settings">Ayarlar</string>
-    <string name="action_delete">Sil</string>
+    <string name="action_sync">Sinkronisasyon</string>
+    <string name="action_settings">Mga setting</string>
+    <string name="action_delete">Burahin</string>
 
     <!-- NewPersonDialogFragment -->
-    <string name="new_record">Yeni kayıt</string>
-    <string name="add_from_contacts">Kişilerden ekle</string>
-    <string name="open_contacts_error">Cihaz özellikleri nedeniyle işlem yapılamıyor</string>
-    <string name="name">Adı</string>
-    <string name="error_hint">Lütfen bir ad girin</string>
-    <string name="phone_number">Telefon Numarası</string>
-    <string name="pick_date">Tarih Seç</string>
-    <string name="wrong_date">Yanlış tarih</string>
-    <string name="year_unknown">Yılı bilmiyorum</string>
-    <string name="cancel_button">Iptal</string>
-    <string name="record_added">Kayıt eklendi</string>
+    <string name="new_record">Bagong talaan</string>
+    <string name="add_from_contacts">Magdagdag galing sa mga kontak</string>
+    <string name="open_contacts_error">Hindi maisagawa ang aksyon dahil sa device features</string>
+    <string name="name">Pangalan</string>
+    <string name="error_hint">Pakilagyan ng pangalan</string>
+    <string name="phone_number">Numero ng telepono</string>
+    <string name="pick_date">Pumili ng petsa</string>
+    <string name="wrong_date">Mali ang petsa</string>
+    <string name="year_unknown">Hindi ko alam ang taon</string>
+    <string name="cancel_button">Kanselahin</string>
+    <string name="record_added">Idinagdag na sa tala</string>
 
     <!-- DetailActivity -->
-    <string name="birthday">Doğum Günü</string>
-    <string name="days_left">Bir sonraki doğumgününe kadarki günler</string>
-    <string name="today">Bugün</string>
-    <string name="days_since_birth">Doğumdan beri</string>
-    <string name="zodiac_sign">Burç</string>
-    <string name="season_picture">Sezon resmi</string>
-    <string name="calendar">Takvim</string>
-    <string name="call">Ara</string>
-    <string name="chat">Sohbet</string>
-    <string name="born_on_this_day">Bu gün doğan</string>
+    <string name="birthday">Araw ng Kapanganakan</string>
+    <string name="days_left">Mga araw hangang sa susunod na kapanganakan</string>
+    <string name="today">Ngayon</string>
+    <string name="days_since_birth">Mga araw simula sa kapanganakan</string>
+    <string name="zodiac_sign">Tanda ng zodiac</string>
+    <string name="season_picture">Larawan ng panahon</string>
+    <string name="calendar">Kalendaryo</string>
+    <string name="call">Tawag</string>
+    <string name="chat">Chat</string>
+    <string name="born_on_this_day">Ipinanganak sa araw na to</string>
 
     <!-- EditActivity -->
-    <string name="editing_label">Düzenleme</string>
-    <string name="record_edited">Kayıt düzenlendi</string>
+    <string name="editing_label">Ini-edit</string>
+    <string name="record_edited">Ang tala ay na edit na</string>
 
     <!-- Alarm -->
-    <string name="security_exception">SecurityException, Samsung cihazlar kayıt olabilirsiniz alarm sayısını kısıtlayın</string>
-    <string name="channel_name">Doğum Günleri</string>
+    <string name="security_exception">SecurityException, Ang Samsung devices ay nililimitahan ang bilang ng alarm na maari mong irehistro</string>
+    <string name="channel_name">Mga araw ng kapanganakan</string>
 
     <!-- Zodiac signs -->
-    <string name="aries">Koç</string>
-    <string name="taurus">Boğa</string>
-    <string name="gemini">İkizler</string>
-    <string name="cancer">Yengeç</string>
-    <string name="leo">Aslan</string>
-    <string name="virgo">Başak</string>
-    <string name="libra">Terazi</string>
-    <string name="scorpio">Akrep</string>
-    <string name="sagittarius">Yay</string>
-    <string name="capricorn">Oğlak</string>
-    <string name="aquarius">Kova</string>
-    <string name="pisces">Balık</string>
+    <string name="aries">Aries</string>
+    <string name="taurus">Taurus</string>
+    <string name="gemini">Gemini</string>
+    <string name="cancer">Kanser</string>
+    <string name="leo">Leo</string>
+    <string name="virgo">Virgo</string>
+    <string name="libra">Libra</string>
+    <string name="scorpio">Scorpio</string>
+    <string name="sagittarius">Sagittarius</string>
+    <string name="capricorn">Capricorn</string>
+    <string name="aquarius">Aquarius</string>
+    <string name="pisces">Pisces</string>
 
     <!-- SettingsActivity -->
-    <string name="optimization_enabled">En iyi duruma getirme etkin!</string>
-    <string name="optimization_description">\nSürüm 6.0 ile Android, arka plan CPU\'yu optimize ederek uygulamaların davranışını etkileyen güç tasarrufu modu Doze\'yi tanıttı.\n\nUygulamayı doğru bir şekilde gerçekleştirmek için Birdays için optimizasyonun kapatılması gerekir.</string>
-    <string name="do_not_show_again">Bir daha gösterme</string>
-    <string name="disable_button">Devre Dışı Bırak</string>
+    <string name="optimization_enabled">Optimization pinagana!</string>
+    <string name="optimization_description">\nSimula sa version 6.0, Ang android ay inintroduce ang power-saving mode Doze na namamahala sa kilos ng mga app sa pamamagitan ng pagantala sa background CPU.\n\nPara mapagana ng maayos ang app i-disable ang optimisasyon para sa Birdays.</string>
+    <string name="do_not_show_again">Huwag ng ipakita pang muli</string>
+    <string name="disable_button">I-disable</string>
     <!-- Notifications -->
-    <string name="notifications">Bildirimler</string>
-    <string name="allow_notification">Uygulamaya yaklaşan doğum günleri bildirimlerini göndermeye izin ver</string>
-    <string name="notifications_time">Bildirim zamanı</string>
-    <string name="additional_notification">Ek bildirim</string>
+    <string name="notifications">Mga notipikasyon</string>
+    <string name="allow_notification">Hayaan ang app na mag padala ng notipikasyon ng nalalapit na kaarawan</string>
+    <string name="notifications_time">Oras ng notipikasyon</string>
+    <string name="additional_notification">Karagdagang notipikasyon</string>
 
     <string-array name="additional_notification_entries">
-        <item>Hiçbir zaman</item>
-        <item>1 gün önce</item>
-        <item>2 gün önce</item>
-        <item>3 gün önce</item>
-        <item>1 hafta önce</item>
-        <item>2 hafta önce</item>
+        <item>Hindi kailanman</item>
+        <item>Bago ang 1 araw</item>
+        <item>Bago ang 2 na araw</item>
+        <item>Bago ang 3 na araw</item>
+        <item>Bago ang 1 linggo</item>
+        <item>Bago ang 2 na linggo</item>
     </string-array>
 
     <string-array name="additional_notification_delay">
-        <item>Bugün</item>
-        <item>Yarın</item>
-        <item>2 gün içinde</item>
-        <item>3 gün içinde</item>
-        <item>Bir hafta içinde</item>
-        <item>2 hafta içinde</item>
+        <item>Ngayon</item>
+        <item>Bukas</item>
+        <item>Sa 2 na araw</item>
+        <item>Sa 3 na araw</item>
+        <item>Sa isang linggo</item>
+        <item>Sa 2 na linggo</item>
     </string-array>
 
-    <string name="notification_tone">Bildirim sesi</string>
-    <string name="ringtone_summary">Bildirim için bir ses seçin. Cihaz ayarlarından varsayılan olarak ton kullanılır</string>
-    <string name="silent">Yok</string>
-    <string name="help">Yardım</string>
-    <string name="tap_here">Bildirimleri almadıysanız, buraya dokunun</string>
+    <string name="notification_tone">Tone ng notipikasyon</string>
+    <string name="ringtone_summary">Pumili ng sound para sa notipikasyon. Sa pamamagitan ng default ay gagamitn ang tone mula sa mga setting ng device</string>
+    <string name="silent">Wala</string>
+    <string name="help">Tulong</string>
+    <string name="tap_here">I-tap dito kung hindi ka nakatanggap ng notipikasyon</string>
     <!-- Synchronization and backup -->
-    <string name="sync_and_backup">Senkronizasyon ve yedekleme</string>
-    <string name="contacts_import_title">Kişileri içe aktar</string>
-    <string name="contacts_import_summary">(ISO 8601 destekler), aygıtınızdan kişileri almak için buraya dokunun</string>
-    <string name="export_records">Verme kayıtları (Beta)</string>
-    <string name="export_records_summary">Yedekleme ile XML dosyasını oluştur</string>
-    <string name="ext_storage_error">Harici depolama mevcut değil</string>
-    <string name="exporting_records">Kayıtları dışa aktarılıyor…</string>
-    <string name="backup_finished">Yedek tamamlandı, XML dosyasında the\u0020</string>
-    <string name="recover_records">Kayıtları iyileştir (Beta)</string>
-    <string name="recover_records_summary">Yedekleme ile XML dosyasını seçin</string>
-    <string name="recover_records_error">İşlem yapılamadı, lütfen web tarayıcısı yükleyin</string>
-    <string name="records_recovered">Kayıtları kurtarıldı</string>
+    <string name="sync_and_backup">Synchronization at backup</string>
+    <string name="contacts_import_title">I-import ang mga kontak</string>
+    <string name="contacts_import_summary">I-tap dito para mag-import ng mga kontak galing sa iyong device (supports ISO 8601)</string>
+    <string name="export_records">I-export ang mga tala (Beta)</string>
+    <string name="export_records_summary">Gumawa ng XML file na may backup</string>
+    <string name="ext_storage_error">Ang external na storage ay hindi availabol</string>
+    <string name="exporting_records">Ini-eksport ang mga tala…</string>
+    <string name="backup_finished">Tapos na ang pag backup, ang XML file sa\u0020</string>
+    <string name="recover_records">I-recover ang mga tala (Beta)</string>
+    <string name="recover_records_summary">Pumili ng XML file na may backup</string>
+    <string name="recover_records_error">Hindi maisagawa ang aksyon, pakiusap i-install ang file manager</string>
+    <string name="records_recovered">Nai-recover na ang mga rekord</string>
     <!-- General -->
-    <string name="general">Genel</string>
-    <string name="night_mode">Gece modu</string>
-    <string name="start_page">Başlangıç sayfası</string>
+    <string name="general">General</string>
+    <string name="night_mode">Night mode</string>
+    <string name="start_page">Start page</string>
 
     <string-array name="start_page_entries">
-        <item>Cari ay</item>
-        <item>Tüm</item>
-        <item>Ünlü</item>
+        <item>kasalukuyang buwan</item>
+        <item>Lahat</item>
+        <item>Tanyag</item>
     </string-array>
 
-    <string name="displayed_age">Görüntülenen yaş</string>
+    <string name="displayed_age">Ipakita ang edad</string>
 
     <string-array name="displayed_age_entries">
-        <item>Mevcut</item>
-        <item>Gelecek</item>
+        <item>Kasalukuyang</item>
+        <item>Hinaharap</item>
     </string-array>
 
-    <string name="displayed_age_changes">Bu değişikliklerin etkili olabilmesi için uygulamayı yeniden başlatmalısın</string>
-    <string name="restart_now">Şimdi yeniden başlat</string>
-    <string name="later">Daha Sonra</string>
-    <string name="rate_app">Bizi değerlendirin</string>
-    <string name="share_app">Uygulamayi paylaş</string>
-    <string name="share_text">Doğum günlerinde akrabalarınızı, arkadaşlarınızı ve meslektaşlarınızı tebrik etmeyi unuttunuz mu? Birdays size önemli bir tatil hatırlatacaktır!\n\n</string>
+    <string name="displayed_age_changes">Kinakailangan mong simulan mula ang app para mag kabisa ang mga ginawang pagbabago</string>
+    <string name="restart_now">Simulang muli ngayon</string>
+    <string name="later">Kalaunan</string>
+    <string name="rate_app">I-rate ang app</string>
+    <string name="share_app">Ibahagi ang app</string>
+    <string name="share_text">Nakalimutan mo bang batiin ang iyong mga kamag-anak, kaibigan o kasamahan sa kanilang kaarawan? ang Birdays ay paaalalahanan ka sa mga importanteng holiday!\n\n</string>
     <!-- Advertising -->
-    <string name="advertising">Reklam</string>
-    <string name="about_ad_title">Neden reklamları görüyorum?</string>
-    <string name="about_ad_summary">Reklam gelirleri, projenin geliştirilmesine ve diğer dillere çevirmeye gider. Reklamları ücretsiz kaldırabilirsiniz</string>
-    <string name="ad_interstitial_title">Arada açılan reklam</string>
-    <string name="ad_interstitial_summary">Bu tür bir reklam günde 1 gösteri ile sınırlıdır. Çok sık değil, değil mi?</string>
-    <string name="ad_banner">Afiş</string>
+    <string name="advertising">Advertising</string>
+    <string name="about_ad_title">Bakit ako nakakakita ng mga ads?</string>
+    <string name="about_ad_summary">Ang kita sa pag a-advertising ay mapupunta sa development ng project at sa mga nag ta translate nito sa ibang lengwahe. Maaari mong tangalin ang mga ads ng walang bayad</string>
+    <string name="ad_interstitial_title">Interstitial ad</string>
+    <string name="ad_interstitial_summary">Ang ganitong uri ng ad ay limitado sa 1 paglabas kada araw. Hindi kadalasan, hindi ba?</string>
+    <string name="ad_banner">Banner</string>
     <!-- About app -->
-    <string name="about_app">Uygulama hakkında</string>
-    <string name="menu_github">Kaynak kodu</string>
-    <string name="privacy_policy">Gizlilik Politikası</string>
-    <string name="software_licenses">Açık kaynak lisanslar</string>
-    <string name="licenses">Lisanslar</string>
+    <string name="about_app">Tungkol sa app</string>
+    <string name="menu_github">Source code</string>
+    <string name="privacy_policy">Patakaran sa Privacy</string>
+    <string name="software_licenses">Mga lisensya ng open-source</string>
+    <string name="licenses">Mga lisensya</string>
 
     <!-- HelpActivity -->
-    <string name="help_header">Neden alarm çalışmıyor?</string>
-    <string name="help_description">Bazı cihazlarda, uygulama arka planı işlemlerini engelleyebilecek veya uygulamanın başlangıçta çalışmasını engelleyebilecek Güç Tasarruf Modu vardır.\nArama işini doğru yapmak için aşağıdaki birkaç basit adımı uygulayın:\n\n1. Birdays uygulaması için bildirimlerin etkinleştirildiğinden emin olun (Ayarlar > Uygulamalar > Birdays).\n\n2. Uygulama arka plan işlemlerini engelleyebilecek görev yöneticileri, görev katilleri veya RAM iyileştiricileri (ör. «Battery Saver», «Clean Master») yüklediyseniz, Beyaz listelerine Birdays ekleyin.\n \n3. Güç tasarrufu modunu kapatın veya Beyaz listedeki Birdays\'i ekleyin (Ayarlar > Pil > Pil optimizasyonu). \nYalnızca Android 6.0 (Marshmallow) veya daha üst bir sürümü çalıştıran cihazlar için.</string>
-    <string name="help_whitelist">Beyaz listeyi aç</string>
-    <string name="help_whitelist_error">Yalnızca Android 6.0 (Marshmallow) veya daha üst bir sürümü çalıştıran cihazlar için</string>
-    <string name="help_delay_text">Unutmayın ki bazı cihazlarda bildirimler gecikme yaşayabilir.</string>
-    <string name="help_settings">Ayarlara git</string>
-    <string name="huawei_header">Huawei sahipleri için</string>
-    <string name="huawei_description">«Ayarlar» ı açın, «Güç tasarrufu» nu seçin ve «Korunan uygulamalar» ı açın. Birdays için bu ayarın açık olduğundan emin olun.</string>
-    <string name="samsung_header">Samsung sahipleri için</string>
-    <string name="samsung_description">«Smart Manager», «Pil» ve sonra «Ayrinti» dokunun. Birdays app için bu özelliği devre dışı bırakın.</string>
-    <string name="xiaomi_header">Huawei sahipleri için</string>
-    <string name="xiaomi_description">«Ayarlar» \'ı açın, «Pil», ardından «Uygulamalarin pil kullanimini yönet» ve «Uygulamaları seçin» seçeneğini açın, Birdays için «Kısıtlama yok» seçeneğini seçin.</string>
-    <string name="show_button">Dizi</string>
-    <string name="help_email_description">Alarm hala çalışmıyorsa, lütfen bana birdaysapp@gmail.com ulaşın</string>
-<<<<<<< HEAD
-    <string name="send_email">E-posta gönder</string>
-=======
-    <string name="send_email">Eposta gönder</string>
+    <string name="help_header">Bakit hindi gumagana ang alarm?</string>
+    <string name="help_description">Ang ibang mga device ay merong Power Saving Mode na maaaring maka harang sa pagproseso ng app background o kaya ay i-disable ang pag takbo ng application sa pag-startup.\nPara mapagana ang alarm ng tama kailangan gawin ang mga simpleng hakbang na ito sa ibaba:\n\n1. Siguraduhing na ang notifikasyon ay gumagana para sa Birdays app (Mga Setting > Apps > Birdays).\n\n2. Kung ikaw ay nag-install ng task managers, task killers o RAM optimizers (hal. «Battery Saver», «Clean Master»), Namaaring humarang sa pag proseso ng app background, Idagdag ang Birdays sa kanilang whitelist.\n\n3. I-Turn off ang iyong power-saving mode o kaya\'y idagdag ang Birdays sa whitelist (Mga Setting > Baterya > Pag-optimize ng baterya).\nPara lamang sa mga devices na gumagana sa Android 6.0 (Marshmallow) o mas mataas pa.</string>
+    <string name="help_whitelist">Buksan ang whitelist</string>
+    <string name="help_whitelist_error">Para lamang sa mga device na gumagana sa Android 6.0 (Marshmallow) or mas mataas pa</string>
+    <string name="help_delay_text">Pakiusap tandaan na sa mga ilang mga notifikasyon ng device ay maaaring magkaroon ng ilang pagka-antala.</string>
+    <string name="help_settings">Buksan ang mga setting</string>
+    <string name="huawei_header">Para sa mga may-ari ng Huawei</string>
+    <string name="huawei_description">Buksan ang device «Mga setting» go to «Power saving» at buksan ang «Protected apps». Siguraduhin na ang feature na ito ay gagana sa Birdays.</string>
+    <string name="samsung_header">Para sa mga may-ari ng Samsung</string>
+    <string name="samsung_description">Bukas ang «Smart Manager», i-tap sa «Battery», pagkatapos ay sa «Detalye». I-disable ang feature na ito para Birdays app.</string>
+    <string name="xiaomi_header">Para sa mga may-ari ng Xiaomi</string>
+    <string name="xiaomi_description">Buksan ang device «Mga setting» pumunta sa «Battery &amp; performance», saka «I-manage ang apps batter usage», buksan ang «Choose apps», piliin ang «No restrictions» para sa Birdays.</string>
+    <string name="show_button">Ipakita</string>
+    <string name="help_email_description">Kung ang alarm ay hindi gumagana, pakiusap kontakin ako sa birdaysapp@gmail.com</string>
+    <string name="send_email">Mag-send ng email</string>
 
     <!-- Famous persons -->
     <!-- 1 january -->
@@ -2862,5 +2861,4 @@
     <string name="kingsley">Ben Kingsley</string>
     <string name="willis">Connie Willis</string>
     <string name="val_kilmer">Val Kilmer</string>
->>>>>>> master
 </resources>

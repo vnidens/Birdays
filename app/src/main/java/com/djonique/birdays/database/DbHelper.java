@@ -72,7 +72,7 @@ public class DbHelper extends SQLiteOpenHelper {
             try {
 
                 db.execSQL("DROP TABLE IF EXISTS " + DB_FAMOUS);
-                db.setTransactionSuccessfull();
+                db.setTransactionSuccessful();
             } finally {
                 db.endTransaction();
             }

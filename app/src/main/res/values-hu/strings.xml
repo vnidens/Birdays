@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!--
     Copyright 2017 Evgeny Timofeev
@@ -17,192 +17,191 @@
 -->
 
 <resources>
-    <string name="build_version">Sürüm</string>
+    <string name="build_version">Build-verzió</string>
 
     <!-- MainActivity -->
-    <string name="loading_contacts">Kişiler yükleniyor…</string>
-    <string name="contacts_uploaded">Kişiler yüklendi</string>
-    <string name="loading_contacts_error">Kişiler içe aktarılamadı, yanlış tarih biçimi</string>
-    <string name="permission_required">Kişileri eklemek için izin gerekiyor</string>
-    <string name="snackbar_allow_text">İzin ver</string>
-    <string name="all">Tüm</string>
-    <string name="famous">Ünlü</string>
-    <string name="age">Geçerli Yaş:\u0020</string>
-    <string name="happy_birthday">Doğum Günün Kutlu Olsun!</string>
-    <string name="web_search_error">İşlem yapılamadı, lütfen web tarayıcısı yükleyin</string>
-    <string name="delete_record_text">Bu kaydı silmek istediğinizden eminmisiniz:\u0020</string>
-    <string name="record_deleted">Kayıt silindi</string>
-    <string name="undo">Geri al</string>
+    <string name="loading_contacts">Névjegyek betöltése…</string>
+    <string name="contacts_uploaded">Névjegyek feltöltve</string>
+    <string name="loading_contacts_error">Nem sikerült a névjegyeket importálni, a dátumformátum nem szabványos</string>
+    <string name="permission_required">A névjegyek importálásához engedély szükséges</string>
+    <string name="snackbar_allow_text">Engedélyezés</string>
+    <string name="all">Összes</string>
+    <string name="famous">Hírességek</string>
+    <string name="age">Aktuális életkor:\u0020</string>
+    <string name="happy_birthday">Boldog Születésnapot!</string>
+    <string name="web_search_error">Nem sikerült végrehajtani a műveletet, telepítse a webböngészőt</string>
+    <string name="delete_record_text">Biztosan törölni kívánja a rekord:\u0020</string>
+    <string name="record_deleted">Rekord törölve</string>
+    <string name="undo">Visszavonás</string>
 
-    <string name="january">Ocak</string>
-    <string name="february">Şubat</string>
-    <string name="march">Mart</string>
-    <string name="april">Nisan</string>
-    <string name="may">Mayıs</string>
-    <string name="june">Haziran</string>
-    <string name="july">Temmuz</string>
-    <string name="august">Ağustos</string>
-    <string name="september">Eylül</string>
-    <string name="october">Ekim</string>
-    <string name="november">Kasım</string>
-    <string name="december">Aralık</string>
+    <string-array name="months">
+        <item>Január</item>
+        <item>Február</item>
+        <item>Március</item>
+        <item>Április</item>
+        <item>Május</item>
+        <item>Június</item>
+        <item>Július</item>
+        <item>Augusztus</item>
+        <item>Szeptember</item>
+        <item>Október</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
 
     <!-- Menu -->
-    <string name="action_sync">Senkronizasyon</string>
-    <string name="action_settings">Ayarlar</string>
-    <string name="action_delete">Sil</string>
+    <string name="action_sync">Szinkronizáció</string>
+    <string name="action_settings">Beállítások</string>
+    <string name="action_delete">Eltávolítás</string>
 
     <!-- NewPersonDialogFragment -->
-    <string name="new_record">Yeni kayıt</string>
-    <string name="add_from_contacts">Kişilerden ekle</string>
-    <string name="open_contacts_error">Cihaz özellikleri nedeniyle işlem yapılamıyor</string>
-    <string name="name">Adı</string>
-    <string name="error_hint">Lütfen bir ad girin</string>
-    <string name="phone_number">Telefon Numarası</string>
-    <string name="pick_date">Tarih Seç</string>
-    <string name="wrong_date">Yanlış tarih</string>
-    <string name="year_unknown">Yılı bilmiyorum</string>
-    <string name="cancel_button">Iptal</string>
-    <string name="record_added">Kayıt eklendi</string>
+    <string name="new_record">Új rekord</string>
+    <string name="add_from_contacts">Hozzáadás a névjegyek közül</string>
+    <string name="open_contacts_error">A műveletet nem sikerült végrehajtani az eszközfunkciók miatt</string>
+    <string name="name">Név</string>
+    <string name="error_hint">Kérjük, adja meg a nevét</string>
+    <string name="phone_number">Telefonszám</string>
+    <string name="pick_date">Dátum kiválasztása</string>
+    <string name="wrong_date">Hibás dátum</string>
+    <string name="year_unknown">Nem tudom az évet</string>
+    <string name="cancel_button">Mégse</string>
+    <string name="record_added">Rekord létrehozva</string>
 
     <!-- DetailActivity -->
-    <string name="birthday">Doğum Günü</string>
-    <string name="days_left">Bir sonraki doğumgününe kadarki günler</string>
-    <string name="today">Bugün</string>
-    <string name="days_since_birth">Doğumdan beri</string>
-    <string name="zodiac_sign">Burç</string>
-    <string name="season_picture">Sezon resmi</string>
-    <string name="calendar">Takvim</string>
-    <string name="call">Ara</string>
-    <string name="chat">Sohbet</string>
-    <string name="born_on_this_day">Bu gün doğan</string>
+    <string name="birthday">Születésnap</string>
+    <string name="days_left">Következő születésnapig hátralévő napok száma</string>
+    <string name="today">Ma</string>
+    <string name="days_since_birth">Születés óta eltelt napok száma</string>
+    <string name="zodiac_sign">Csillagjegy</string>
+    <string name="season_picture">Szezon kép</string>
+    <string name="calendar">Naptár</string>
+    <string name="call">Hívás</string>
+    <string name="chat">Csevegés</string>
+    <string name="born_on_this_day">Ezen a napon született</string>
 
     <!-- EditActivity -->
-    <string name="editing_label">Düzenleme</string>
-    <string name="record_edited">Kayıt düzenlendi</string>
+    <string name="editing_label">Szerkesztés</string>
+    <string name="record_edited">Rekord szerkesztése</string>
 
     <!-- Alarm -->
-    <string name="security_exception">SecurityException, Samsung cihazlar kayıt olabilirsiniz alarm sayısını kısıtlayın</string>
-    <string name="channel_name">Doğum Günleri</string>
+    <string name="security_exception">SecurityException, a Samsung készülékek korlátozzák a regisztrálható riasztások számát</string>
+    <string name="channel_name">Születésnap</string>
 
     <!-- Zodiac signs -->
-    <string name="aries">Koç</string>
-    <string name="taurus">Boğa</string>
-    <string name="gemini">İkizler</string>
-    <string name="cancer">Yengeç</string>
-    <string name="leo">Aslan</string>
-    <string name="virgo">Başak</string>
-    <string name="libra">Terazi</string>
-    <string name="scorpio">Akrep</string>
-    <string name="sagittarius">Yay</string>
-    <string name="capricorn">Oğlak</string>
-    <string name="aquarius">Kova</string>
-    <string name="pisces">Balık</string>
+    <string name="aries">Kos</string>
+    <string name="taurus">Bika</string>
+    <string name="gemini">Ikrek</string>
+    <string name="cancer">Rák</string>
+    <string name="leo">Oroszlán</string>
+    <string name="virgo">Szűz</string>
+    <string name="libra">Mérleg</string>
+    <string name="scorpio">Skorpió</string>
+    <string name="sagittarius">Nyilas</string>
+    <string name="capricorn">Bak</string>
+    <string name="aquarius">Vízöntő</string>
+    <string name="pisces">Halak</string>
 
     <!-- SettingsActivity -->
-    <string name="optimization_enabled">En iyi duruma getirme etkin!</string>
-    <string name="optimization_description">\nSürüm 6.0 ile Android, arka plan CPU\'yu optimize ederek uygulamaların davranışını etkileyen güç tasarrufu modu Doze\'yi tanıttı.\n\nUygulamayı doğru bir şekilde gerçekleştirmek için Birdays için optimizasyonun kapatılması gerekir.</string>
-    <string name="do_not_show_again">Bir daha gösterme</string>
-    <string name="disable_button">Devre Dışı Bırak</string>
+    <string name="optimization_enabled">Optimalizálás engedélyezve!</string>
+    <string name="optimization_description">\nA 6.0 verziótól kezdődően az Android bevezette az energiatakarékos módot Doze, amely kezeli az alkalmazások viselkedését a háttér CPU elhalasztásával.\n\nAz alkalmazások helyes működésének letiltásához a Birdays optimalizálását letiltja.</string>
+    <string name="do_not_show_again">Többet ne mutassa</string>
+    <string name="disable_button">Kikapcsolja</string>
     <!-- Notifications -->
-    <string name="notifications">Bildirimler</string>
-    <string name="allow_notification">Uygulamaya yaklaşan doğum günleri bildirimlerini göndermeye izin ver</string>
-    <string name="notifications_time">Bildirim zamanı</string>
-    <string name="additional_notification">Ek bildirim</string>
+    <string name="notifications">Értesítések</string>
+    <string name="allow_notification">Engedélyezze, hogy az alkalmazás küldjön értesítéseket a következő születésnapokról</string>
+    <string name="notifications_time">Értesítés idő</string>
+    <string name="additional_notification">Kiegészítő értesítés</string>
 
     <string-array name="additional_notification_entries">
-        <item>Hiçbir zaman</item>
-        <item>1 gün önce</item>
-        <item>2 gün önce</item>
-        <item>3 gün önce</item>
-        <item>1 hafta önce</item>
-        <item>2 hafta önce</item>
+        <item>Soha</item>
+        <item>1 nappal előtte</item>
+        <item>2 nappal előtte</item>
+        <item>3 nappal előtte</item>
+        <item>1 héttel előtte</item>
+        <item>2 héttel előtte</item>
     </string-array>
 
     <string-array name="additional_notification_delay">
-        <item>Bugün</item>
-        <item>Yarın</item>
-        <item>2 gün içinde</item>
-        <item>3 gün içinde</item>
-        <item>Bir hafta içinde</item>
-        <item>2 hafta içinde</item>
+        <item>Ma</item>
+        <item>Holnap</item>
+        <item>2 nap alatt</item>
+        <item>3 napon belül</item>
+        <item>Egy héten belül</item>
+        <item>2 hét alatt</item>
     </string-array>
 
-    <string name="notification_tone">Bildirim sesi</string>
-    <string name="ringtone_summary">Bildirim için bir ses seçin. Cihaz ayarlarından varsayılan olarak ton kullanılır</string>
-    <string name="silent">Yok</string>
-    <string name="help">Yardım</string>
-    <string name="tap_here">Bildirimleri almadıysanız, buraya dokunun</string>
+    <string name="notification_tone">Értesítés hangja</string>
+    <string name="ringtone_summary">Válasszon hangot az értesítéshez. Alapértelmezés szerint az eszköz beállításainál használt hang</string>
+    <string name="silent">Egyik sem</string>
+    <string name="help">Segítség</string>
+    <string name="tap_here">Érintse meg ide, ha nem kap értesítést</string>
     <!-- Synchronization and backup -->
-    <string name="sync_and_backup">Senkronizasyon ve yedekleme</string>
-    <string name="contacts_import_title">Kişileri içe aktar</string>
-    <string name="contacts_import_summary">(ISO 8601 destekler), aygıtınızdan kişileri almak için buraya dokunun</string>
-    <string name="export_records">Verme kayıtları (Beta)</string>
-    <string name="export_records_summary">Yedekleme ile XML dosyasını oluştur</string>
-    <string name="ext_storage_error">Harici depolama mevcut değil</string>
-    <string name="exporting_records">Kayıtları dışa aktarılıyor…</string>
-    <string name="backup_finished">Yedek tamamlandı, XML dosyasında the\u0020</string>
-    <string name="recover_records">Kayıtları iyileştir (Beta)</string>
-    <string name="recover_records_summary">Yedekleme ile XML dosyasını seçin</string>
-    <string name="recover_records_error">İşlem yapılamadı, lütfen web tarayıcısı yükleyin</string>
-    <string name="records_recovered">Kayıtları kurtarıldı</string>
+    <string name="sync_and_backup">Szinkronizálás és mentés</string>
+    <string name="contacts_import_title">Névjegyek importálása</string>
+    <string name="contacts_import_summary">Érintse meg ide a névjegyek importálásá a készülékről (támogatja az ISO 8601-et)</string>
+    <string name="export_records">Rekordok exportálása (Béta)</string>
+    <string name="export_records_summary">Hozzon létre biztonsági másolatot tartalmazó XML fájlt</string>
+    <string name="ext_storage_error">Külső tárhely nem áll rendelkezésre</string>
+    <string name="exporting_records">Rekordok exportálása…</string>
+    <string name="backup_finished">Biztonsági mentés kész, XML fájl a\u0020</string>
+    <string name="recover_records">Rekordok helyreállítása (Béta)</string>
+    <string name="recover_records_summary">Válassza ki a biztonsági mentést tartalmazó XML-fájlt</string>
+    <string name="recover_records_error">Nem sikerült végrehajtani a műveletet, telepítse a fájlkezelőt</string>
+    <string name="records_recovered">Rekordok helyreállítva</string>
     <!-- General -->
-    <string name="general">Genel</string>
-    <string name="night_mode">Gece modu</string>
-    <string name="start_page">Başlangıç sayfası</string>
+    <string name="general">Általános</string>
+    <string name="night_mode">Éjszakai üzemmód</string>
+    <string name="start_page">Kezdőlap</string>
 
     <string-array name="start_page_entries">
-        <item>Cari ay</item>
-        <item>Tüm</item>
-        <item>Ünlü</item>
+        <item>Jelenlegi hónap</item>
+        <item>Összes</item>
+        <item>Hírességek</item>
     </string-array>
 
-    <string name="displayed_age">Görüntülenen yaş</string>
+    <string name="displayed_age">Megjelenített életkor</string>
 
     <string-array name="displayed_age_entries">
-        <item>Mevcut</item>
-        <item>Gelecek</item>
+        <item>Aktuális</item>
+        <item>Jövőbeli</item>
     </string-array>
 
-    <string name="displayed_age_changes">Bu değişikliklerin etkili olabilmesi için uygulamayı yeniden başlatmalısın</string>
-    <string name="restart_now">Şimdi yeniden başlat</string>
-    <string name="later">Daha Sonra</string>
-    <string name="rate_app">Bizi değerlendirin</string>
-    <string name="share_app">Uygulamayi paylaş</string>
-    <string name="share_text">Doğum günlerinde akrabalarınızı, arkadaşlarınızı ve meslektaşlarınızı tebrik etmeyi unuttunuz mu? Birdays size önemli bir tatil hatırlatacaktır!\n\n</string>
+    <string name="displayed_age_changes">Újra kell indítania az alkalmazást, hogy ezek a módosítások életbe lépjenek</string>
+    <string name="restart_now">Újraindítás most</string>
+    <string name="later">Később</string>
+    <string name="rate_app">Alkalmazás értékelése</string>
+    <string name="share_app">Megosztás</string>
+    <string name="share_text">Elfelejtetted felköszönteni rokonaid, barátaid vagy kollégáid a születésnapjukon? A Birdays emlékeztetni fog az ilyen fontos ünnepeken! \n\n</string>
     <!-- Advertising -->
-    <string name="advertising">Reklam</string>
-    <string name="about_ad_title">Neden reklamları görüyorum?</string>
-    <string name="about_ad_summary">Reklam gelirleri, projenin geliştirilmesine ve diğer dillere çevirmeye gider. Reklamları ücretsiz kaldırabilirsiniz</string>
-    <string name="ad_interstitial_title">Arada açılan reklam</string>
-    <string name="ad_interstitial_summary">Bu tür bir reklam günde 1 gösteri ile sınırlıdır. Çok sık değil, değil mi?</string>
-    <string name="ad_banner">Afiş</string>
+    <string name="advertising">Hirdetések</string>
+    <string name="about_ad_title">Miért látok hirdetéseket?</string>
+    <string name="about_ad_summary">A reklámbevétel a projekt fejlesztéséhez és más nyelvek fordításához kapcsolódik. A hirdetéseket ingyen elrejtheted</string>
+    <string name="ad_interstitial_title">Közbeiktatott hirdetés</string>
+    <string name="ad_interstitial_summary">Ez a típusú hirdetés napi 1 megjelenítése. Nem olyan gyakran, nem igaz?</string>
+    <string name="ad_banner">Transzparens</string>
     <!-- About app -->
-    <string name="about_app">Uygulama hakkında</string>
-    <string name="menu_github">Kaynak kodu</string>
-    <string name="privacy_policy">Gizlilik Politikası</string>
-    <string name="software_licenses">Açık kaynak lisanslar</string>
-    <string name="licenses">Lisanslar</string>
+    <string name="about_app">Az appról</string>
+    <string name="menu_github">Forráskód</string>
+    <string name="privacy_policy">Adatvédelmi irányelvek</string>
+    <string name="software_licenses">Nyílt forráskódú licencek</string>
+    <string name="licenses">Licenszek</string>
 
     <!-- HelpActivity -->
-    <string name="help_header">Neden alarm çalışmıyor?</string>
-    <string name="help_description">Bazı cihazlarda, uygulama arka planı işlemlerini engelleyebilecek veya uygulamanın başlangıçta çalışmasını engelleyebilecek Güç Tasarruf Modu vardır.\nArama işini doğru yapmak için aşağıdaki birkaç basit adımı uygulayın:\n\n1. Birdays uygulaması için bildirimlerin etkinleştirildiğinden emin olun (Ayarlar > Uygulamalar > Birdays).\n\n2. Uygulama arka plan işlemlerini engelleyebilecek görev yöneticileri, görev katilleri veya RAM iyileştiricileri (ör. «Battery Saver», «Clean Master») yüklediyseniz, Beyaz listelerine Birdays ekleyin.\n \n3. Güç tasarrufu modunu kapatın veya Beyaz listedeki Birdays\'i ekleyin (Ayarlar > Pil > Pil optimizasyonu). \nYalnızca Android 6.0 (Marshmallow) veya daha üst bir sürümü çalıştıran cihazlar için.</string>
-    <string name="help_whitelist">Beyaz listeyi aç</string>
-    <string name="help_whitelist_error">Yalnızca Android 6.0 (Marshmallow) veya daha üst bir sürümü çalıştıran cihazlar için</string>
-    <string name="help_delay_text">Unutmayın ki bazı cihazlarda bildirimler gecikme yaşayabilir.</string>
-    <string name="help_settings">Ayarlara git</string>
-    <string name="huawei_header">Huawei sahipleri için</string>
-    <string name="huawei_description">«Ayarlar» ı açın, «Güç tasarrufu» nu seçin ve «Korunan uygulamalar» ı açın. Birdays için bu ayarın açık olduğundan emin olun.</string>
-    <string name="samsung_header">Samsung sahipleri için</string>
-    <string name="samsung_description">«Smart Manager», «Pil» ve sonra «Ayrinti» dokunun. Birdays app için bu özelliği devre dışı bırakın.</string>
-    <string name="xiaomi_header">Huawei sahipleri için</string>
-    <string name="xiaomi_description">«Ayarlar» \'ı açın, «Pil», ardından «Uygulamalarin pil kullanimini yönet» ve «Uygulamaları seçin» seçeneğini açın, Birdays için «Kısıtlama yok» seçeneğini seçin.</string>
-    <string name="show_button">Dizi</string>
-    <string name="help_email_description">Alarm hala çalışmıyorsa, lütfen bana birdaysapp@gmail.com ulaşın</string>
-<<<<<<< HEAD
-    <string name="send_email">E-posta gönder</string>
-=======
-    <string name="send_email">Eposta gönder</string>
+    <string name="help_header">Miért nem működik a riasztás?</string>
+    <string name="help_description">Néhány eszköz rendelkezik energiatakarékos móddal, amely megakadályozhatja az alkalmazások háttérfolyamatait, vagy letilthatja az alkalmazást indításkor.\nA riasztás megfelelő működéséhez hajtsa végre az alábbi néhány egyszerű lépést: \n\n1. Győződjön meg arról, hogy az értesítések engedélyezve vannak a Birdays alkalmazáshoz (Beállítások > Alkalmazások > Birdays).\n\n2. Ha fel van telepítve a feladatkezelők, a feladatgyilkosok vagy a RAM-optimalizátorok (pl. «Battery Saver», «Clean Master»), amelyek blokkolhatják az alkalmazás háttérfolyamatait, hozzáadhatják Birdays a engedélyező listájához.\n\n3. Kapcsolja ki energiatakarékos üzemmódját vagy hozzáadhatják Birdays a engedélyező listájához (Beállítások > Akkumulátor > Akkumulátoroptimalizálás).\nCsak az Android 6.0 (Marshmallow) vagy újabb verziójú eszközök esetében.</string>
+    <string name="help_whitelist">Nyílt engedélylista</string>
+    <string name="help_whitelist_error">Csak az Android 6.0 (Marshmallow) vagy újabb verziójú eszközök esetében</string>
+    <string name="help_delay_text">Felhívjuk figyelmét, hogy egyes készülékekre vonatkozó értesítések késedelmet szenvedhetnek.</string>
+    <string name="help_settings">Nyisd meg a beállításokat</string>
+    <string name="huawei_header">A Huawei tulajdonosok számára</string>
+    <string name="huawei_description">Nyissa meg a készülék «Beállítások» menüpontját, lépjen az «Energiatakarékosság» pontra, és nyissa meg a «Védett alkalmazások» lehetőséget. Győződjön meg róla, hogy ez a funkció engedélyezett a Birdays esetében.</string>
+    <string name="samsung_header">A Samsung tulajdonosok számára</string>
+    <string name="samsung_description">Nyissa meg a «Intelligens kezelő», érintse meg az «Akkumulátor» pontot, majd a «Adatok» pontot. Tiltsa le ezt a funkciót a Birdays app.</string>
+    <string name="xiaomi_header">A Xiaomi tulajdonosok számára</string>
+    <string name="xiaomi_description">Nyissa meg a készülék «Beállítások» menüpontját, folytassa az «Akkumulátor &amp; teljesítmény», majd «Alkalmazások kezelése az akkumulátorok használatával», nyissa meg az «Alkalmazások kiválasztása» lehetőséget, válassza a «Nincs korlátozás» lehetőséget a Birdays.</string>
+    <string name="show_button">Mutat</string>
+    <string name="help_email_description">Ha a riasztás még mindig nem működik, kérjük, lépjen velem kapcsolatba birdaysapp@gmail.com</string>
+    <string name="send_email">Küldjön email</string>
 
     <!-- Famous persons -->
     <!-- 1 january -->
@@ -2862,5 +2861,4 @@
     <string name="kingsley">Ben Kingsley</string>
     <string name="willis">Connie Willis</string>
     <string name="val_kilmer">Val Kilmer</string>
->>>>>>> master
 </resources>

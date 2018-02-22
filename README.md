@@ -1,18 +1,37 @@
 ## Birdays
-App saves Birthdays and displays famous persons with whom you were born in one day.
+*Simple birthday app with widget and famous people's birthdays.*
+
+**[Install on Google Play](https://play.google.com/store/apps/details?id=com.djonique.birdays)**
 ## Translators
-Serhii Ponomarenko (Ukrainian)
+Serhii Ponomarenko (Ukrainian) [mellangr](https://github.com/mellangr)
 
 Marc Sulser (Deutsch)
 
-Pablo Rodríguez (Spanish)
+Pablo Rodríguez (Spanish) [MeLlamoPablo](https://github.com/MeLlamoPablo)
 
 Dai Jia (Chinese simplified)
 
 Uluç Muslu (Turkish)
 
 isaideureka (Indonesian)
+
+Nito (Norwegian)
+
+José Romero (French)
+
+Ruah Timario (Filipino) [ruahtheking](https://github.com/ruahtheking)
+
+Belkacem Mohammed (Kabyle) [belkacem77](https://github.com/belkacem77)
+
+Miguel Dos Reis (Portuguese and Spanish)
+
+Omer Surer (Turkish)
+
+Xiupeng (Chinese traditional)
+
+Andra Fetele (Romanian) [sarmizegetusaa](https://github.com/sarmizegetusaa)
 ## License
+
 ```
 Copyright 2017 Evgeny Timofeev
 

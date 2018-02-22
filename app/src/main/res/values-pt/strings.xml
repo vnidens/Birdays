@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!--
     Copyright 2017 Evgeny Timofeev
@@ -17,192 +17,191 @@
 -->
 
 <resources>
-    <string name="build_version">Sürüm</string>
+    <string name="build_version">Versão da compilação</string>
 
     <!-- MainActivity -->
-    <string name="loading_contacts">Kişiler yükleniyor…</string>
-    <string name="contacts_uploaded">Kişiler yüklendi</string>
-    <string name="loading_contacts_error">Kişiler içe aktarılamadı, yanlış tarih biçimi</string>
-    <string name="permission_required">Kişileri eklemek için izin gerekiyor</string>
-    <string name="snackbar_allow_text">İzin ver</string>
-    <string name="all">Tüm</string>
-    <string name="famous">Ünlü</string>
-    <string name="age">Geçerli Yaş:\u0020</string>
-    <string name="happy_birthday">Doğum Günün Kutlu Olsun!</string>
-    <string name="web_search_error">İşlem yapılamadı, lütfen web tarayıcısı yükleyin</string>
-    <string name="delete_record_text">Bu kaydı silmek istediğinizden eminmisiniz:\u0020</string>
-    <string name="record_deleted">Kayıt silindi</string>
-    <string name="undo">Geri al</string>
+    <string name="loading_contacts">A carregar contactos…</string>
+    <string name="contacts_uploaded">Contatos carregados</string>
+    <string name="loading_contacts_error">Não é possível importar contatos, o formato de data é diferente do padrão</string>
+    <string name="permission_required">Permissão é necessária para a importação de contatos</string>
+    <string name="snackbar_allow_text">Permitir</string>
+    <string name="all">Todos</string>
+    <string name="famous">Famosos</string>
+    <string name="age">Idade atual:\u0020</string>
+    <string name="happy_birthday">Feliz Aniversário!</string>
+    <string name="web_search_error">Não é possível executar a ação, por favor, instale o navegador da web</string>
+    <string name="delete_record_text">Você tem a certeza que deseja excluir este registro:\u0020</string>
+    <string name="record_deleted">Registro excluído</string>
+    <string name="undo">Desfazer</string>
 
-    <string name="january">Ocak</string>
-    <string name="february">Şubat</string>
-    <string name="march">Mart</string>
-    <string name="april">Nisan</string>
-    <string name="may">Mayıs</string>
-    <string name="june">Haziran</string>
-    <string name="july">Temmuz</string>
-    <string name="august">Ağustos</string>
-    <string name="september">Eylül</string>
-    <string name="october">Ekim</string>
-    <string name="november">Kasım</string>
-    <string name="december">Aralık</string>
+    <string-array name="months">
+        <item>Janeiro</item>
+        <item>Fevereiro</item>
+        <item>Março</item>
+        <item>Abril</item>
+        <item>Maio</item>
+        <item>Junho</item>
+        <item>Julho</item>
+        <item>Agosto</item>
+        <item>Setembro</item>
+        <item>Outubro</item>
+        <item>Novembro</item>
+        <item>Dezembro</item>
+    </string-array>
 
     <!-- Menu -->
-    <string name="action_sync">Senkronizasyon</string>
-    <string name="action_settings">Ayarlar</string>
-    <string name="action_delete">Sil</string>
+    <string name="action_sync">Sincronização</string>
+    <string name="action_settings">Definições</string>
+    <string name="action_delete">Excluir</string>
 
     <!-- NewPersonDialogFragment -->
-    <string name="new_record">Yeni kayıt</string>
-    <string name="add_from_contacts">Kişilerden ekle</string>
-    <string name="open_contacts_error">Cihaz özellikleri nedeniyle işlem yapılamıyor</string>
-    <string name="name">Adı</string>
-    <string name="error_hint">Lütfen bir ad girin</string>
-    <string name="phone_number">Telefon Numarası</string>
-    <string name="pick_date">Tarih Seç</string>
-    <string name="wrong_date">Yanlış tarih</string>
-    <string name="year_unknown">Yılı bilmiyorum</string>
-    <string name="cancel_button">Iptal</string>
-    <string name="record_added">Kayıt eklendi</string>
+    <string name="new_record">Novo registro</string>
+    <string name="add_from_contacts">Adicionar do contactos</string>
+    <string name="open_contacts_error">Não é possível executar ação devido às características do dispositivo</string>
+    <string name="name">Nome</string>
+    <string name="error_hint">Por favor, introduza o nome</string>
+    <string name="phone_number">Número de telefone</string>
+    <string name="pick_date">Escolher data</string>
+    <string name="wrong_date">Data errada</string>
+    <string name="year_unknown">Não sei o ano</string>
+    <string name="cancel_button">Cancelar</string>
+    <string name="record_added">Registro adicionado</string>
 
     <!-- DetailActivity -->
-    <string name="birthday">Doğum Günü</string>
-    <string name="days_left">Bir sonraki doğumgününe kadarki günler</string>
-    <string name="today">Bugün</string>
-    <string name="days_since_birth">Doğumdan beri</string>
-    <string name="zodiac_sign">Burç</string>
-    <string name="season_picture">Sezon resmi</string>
-    <string name="calendar">Takvim</string>
-    <string name="call">Ara</string>
-    <string name="chat">Sohbet</string>
-    <string name="born_on_this_day">Bu gün doğan</string>
+    <string name="birthday">Aniversário</string>
+    <string name="days_left">Dias até o próximo aniversário</string>
+    <string name="today">Hoje</string>
+    <string name="days_since_birth">Dias desde o nascimento</string>
+    <string name="zodiac_sign">Signo do Zodíaco</string>
+    <string name="season_picture">Imagens de temporada</string>
+    <string name="calendar">Calendário</string>
+    <string name="call">Chamada</string>
+    <string name="chat">Conversa</string>
+    <string name="born_on_this_day">Nascido neste dia</string>
 
     <!-- EditActivity -->
-    <string name="editing_label">Düzenleme</string>
-    <string name="record_edited">Kayıt düzenlendi</string>
+    <string name="editing_label">Editando</string>
+    <string name="record_edited">Registro editado</string>
 
     <!-- Alarm -->
-    <string name="security_exception">SecurityException, Samsung cihazlar kayıt olabilirsiniz alarm sayısını kısıtlayın</string>
-    <string name="channel_name">Doğum Günleri</string>
+    <string name="security_exception">SecurityException, dispositivos Samsung restringem o número de alarmes que pode registar</string>
+    <string name="channel_name">Aniversários</string>
 
     <!-- Zodiac signs -->
-    <string name="aries">Koç</string>
-    <string name="taurus">Boğa</string>
-    <string name="gemini">İkizler</string>
-    <string name="cancer">Yengeç</string>
-    <string name="leo">Aslan</string>
-    <string name="virgo">Başak</string>
-    <string name="libra">Terazi</string>
-    <string name="scorpio">Akrep</string>
-    <string name="sagittarius">Yay</string>
-    <string name="capricorn">Oğlak</string>
-    <string name="aquarius">Kova</string>
-    <string name="pisces">Balık</string>
+    <string name="aries">Carneiro</string>
+    <string name="taurus">Touro</string>
+    <string name="gemini">Gémeos</string>
+    <string name="cancer">Carangueijo</string>
+    <string name="leo">Leão</string>
+    <string name="virgo">Virgem</string>
+    <string name="libra">Balança</string>
+    <string name="scorpio">Escorpião</string>
+    <string name="sagittarius">Sagitário</string>
+    <string name="capricorn">Capricórnio</string>
+    <string name="aquarius">Aquário</string>
+    <string name="pisces">Peixes</string>
 
     <!-- SettingsActivity -->
-    <string name="optimization_enabled">En iyi duruma getirme etkin!</string>
-    <string name="optimization_description">\nSürüm 6.0 ile Android, arka plan CPU\'yu optimize ederek uygulamaların davranışını etkileyen güç tasarrufu modu Doze\'yi tanıttı.\n\nUygulamayı doğru bir şekilde gerçekleştirmek için Birdays için optimizasyonun kapatılması gerekir.</string>
-    <string name="do_not_show_again">Bir daha gösterme</string>
-    <string name="disable_button">Devre Dışı Bırak</string>
+    <string name="optimization_enabled">Otimização ativada!</string>
+    <string name="optimization_description">\n A partir da versão 6.0, o Android introduziu o modo de economia de energia Doze que gerencia o comportamento dos aplicativos adiando a CPU em segundo plano. \n\n Para que o aplicativo funcione corretamente, desative a otimização para o Birdays.</string>
+    <string name="do_not_show_again">Não mostrar novamente</string>
+    <string name="disable_button">Desativar</string>
     <!-- Notifications -->
-    <string name="notifications">Bildirimler</string>
-    <string name="allow_notification">Uygulamaya yaklaşan doğum günleri bildirimlerini göndermeye izin ver</string>
-    <string name="notifications_time">Bildirim zamanı</string>
-    <string name="additional_notification">Ek bildirim</string>
+    <string name="notifications">Notificações</string>
+    <string name="allow_notification">Permitir que o aplicativo envie notificações de aniversários futuros</string>
+    <string name="notifications_time">Hora de notificação</string>
+    <string name="additional_notification">Notificação adicional</string>
 
     <string-array name="additional_notification_entries">
-        <item>Hiçbir zaman</item>
-        <item>1 gün önce</item>
-        <item>2 gün önce</item>
-        <item>3 gün önce</item>
-        <item>1 hafta önce</item>
-        <item>2 hafta önce</item>
+        <item>Nunca</item>
+        <item>1 dia antes</item>
+        <item>2 dias antes</item>
+        <item>3 dias antes</item>
+        <item>1 semana antes</item>
+        <item>2 semanas antes</item>
     </string-array>
 
     <string-array name="additional_notification_delay">
-        <item>Bugün</item>
-        <item>Yarın</item>
-        <item>2 gün içinde</item>
-        <item>3 gün içinde</item>
-        <item>Bir hafta içinde</item>
-        <item>2 hafta içinde</item>
+        <item>Hoje</item>
+        <item>Amanhã</item>
+        <item>Em 2 dias</item>
+        <item>Em 3 dias</item>
+        <item>Em uma semana</item>
+        <item>Em 2 semanas</item>
     </string-array>
 
-    <string name="notification_tone">Bildirim sesi</string>
-    <string name="ringtone_summary">Bildirim için bir ses seçin. Cihaz ayarlarından varsayılan olarak ton kullanılır</string>
-    <string name="silent">Yok</string>
-    <string name="help">Yardım</string>
-    <string name="tap_here">Bildirimleri almadıysanız, buraya dokunun</string>
+    <string name="notification_tone">Toque de notificação</string>
+    <string name="ringtone_summary">Escolha um som para notificação. Por padrão, é usado o Tom das definições do dispositivo</string>
+    <string name="silent">Nada</string>
+    <string name="help">Ajuda</string>
+    <string name="tap_here">Toque aqui se você não receber notificações</string>
     <!-- Synchronization and backup -->
-    <string name="sync_and_backup">Senkronizasyon ve yedekleme</string>
-    <string name="contacts_import_title">Kişileri içe aktar</string>
-    <string name="contacts_import_summary">(ISO 8601 destekler), aygıtınızdan kişileri almak için buraya dokunun</string>
-    <string name="export_records">Verme kayıtları (Beta)</string>
-    <string name="export_records_summary">Yedekleme ile XML dosyasını oluştur</string>
-    <string name="ext_storage_error">Harici depolama mevcut değil</string>
-    <string name="exporting_records">Kayıtları dışa aktarılıyor…</string>
-    <string name="backup_finished">Yedek tamamlandı, XML dosyasında the\u0020</string>
-    <string name="recover_records">Kayıtları iyileştir (Beta)</string>
-    <string name="recover_records_summary">Yedekleme ile XML dosyasını seçin</string>
-    <string name="recover_records_error">İşlem yapılamadı, lütfen web tarayıcısı yükleyin</string>
-    <string name="records_recovered">Kayıtları kurtarıldı</string>
+    <string name="sync_and_backup">Sincronização e backup</string>
+    <string name="contacts_import_title">Importar contactos</string>
+    <string name="contacts_import_summary">Toque aqui para importar contatos do seu dispositivo (suporta ISO 8601)</string>
+    <string name="export_records">Registros de exportação (Beta)</string>
+    <string name="export_records_summary">Criar o arquivo XML com backup</string>
+    <string name="ext_storage_error">O armazenamento externo não está disponível</string>
+    <string name="exporting_records">Exportando registros…</string>
+    <string name="backup_finished">Backup concluído, arquivo XML no\u0020</string>
+    <string name="recover_records">Recuperar registros (Beta)</string>
+    <string name="recover_records_summary">Escolha o arquivo XML com backup</string>
+    <string name="recover_records_error">Não é possível executar a ação, por favor instale o gerenciador de arquivos</string>
+    <string name="records_recovered">Registros recuperados</string>
     <!-- General -->
-    <string name="general">Genel</string>
-    <string name="night_mode">Gece modu</string>
-    <string name="start_page">Başlangıç sayfası</string>
+    <string name="general">Geral</string>
+    <string name="night_mode">Modo noturno</string>
+    <string name="start_page">Página inicial</string>
 
     <string-array name="start_page_entries">
-        <item>Cari ay</item>
-        <item>Tüm</item>
-        <item>Ünlü</item>
+        <item>Mês atual</item>
+        <item>Todos</item>
+        <item>Famosos</item>
     </string-array>
 
-    <string name="displayed_age">Görüntülenen yaş</string>
+    <string name="displayed_age">Idade exibida</string>
 
     <string-array name="displayed_age_entries">
-        <item>Mevcut</item>
-        <item>Gelecek</item>
+        <item>Atual</item>
+        <item>Futuro</item>
     </string-array>
 
-    <string name="displayed_age_changes">Bu değişikliklerin etkili olabilmesi için uygulamayı yeniden başlatmalısın</string>
-    <string name="restart_now">Şimdi yeniden başlat</string>
-    <string name="later">Daha Sonra</string>
-    <string name="rate_app">Bizi değerlendirin</string>
-    <string name="share_app">Uygulamayi paylaş</string>
-    <string name="share_text">Doğum günlerinde akrabalarınızı, arkadaşlarınızı ve meslektaşlarınızı tebrik etmeyi unuttunuz mu? Birdays size önemli bir tatil hatırlatacaktır!\n\n</string>
+    <string name="displayed_age_changes">Você deve reiniciar um aplicativo para que essas alterações entrem em vigor</string>
+    <string name="restart_now">Reinicie agora</string>
+    <string name="later">Mais tarde</string>
+    <string name="rate_app">Classificar a aplicação</string>
+    <string name="share_app">Compartilhar</string>
+    <string name="share_text">Você esqueceu de felicitar seus parentes, amigos ou colegas no seu aniversário? Birdays irá lembrá-lo de um feriado importante! \n\n</string>
     <!-- Advertising -->
-    <string name="advertising">Reklam</string>
-    <string name="about_ad_title">Neden reklamları görüyorum?</string>
-    <string name="about_ad_summary">Reklam gelirleri, projenin geliştirilmesine ve diğer dillere çevirmeye gider. Reklamları ücretsiz kaldırabilirsiniz</string>
-    <string name="ad_interstitial_title">Arada açılan reklam</string>
-    <string name="ad_interstitial_summary">Bu tür bir reklam günde 1 gösteri ile sınırlıdır. Çok sık değil, değil mi?</string>
-    <string name="ad_banner">Afiş</string>
+    <string name="advertising">Publicidade</string>
+    <string name="about_ad_title">Por que vejo anúncios?</string>
+    <string name="about_ad_summary">A receita da publicidade vai ao desenvolvimento do projeto e à tradução para outros idiomas. Você pode remover anúncios gratuitamente</string>
+    <string name="ad_interstitial_title">Anúncio intersticial</string>
+    <string name="ad_interstitial_summary">Este tipo de anúncio é limitado a 1 por dia. Não tão frequentemente, não é?</string>
+    <string name="ad_banner">Banner</string>
     <!-- About app -->
-    <string name="about_app">Uygulama hakkında</string>
-    <string name="menu_github">Kaynak kodu</string>
-    <string name="privacy_policy">Gizlilik Politikası</string>
-    <string name="software_licenses">Açık kaynak lisanslar</string>
-    <string name="licenses">Lisanslar</string>
+    <string name="about_app">Sobre a aplicação</string>
+    <string name="menu_github">Código fonte</string>
+    <string name="privacy_policy">Política de privacidade</string>
+    <string name="software_licenses">Licenças de código aberto</string>
+    <string name="licenses">Licenças</string>
 
     <!-- HelpActivity -->
-    <string name="help_header">Neden alarm çalışmıyor?</string>
-    <string name="help_description">Bazı cihazlarda, uygulama arka planı işlemlerini engelleyebilecek veya uygulamanın başlangıçta çalışmasını engelleyebilecek Güç Tasarruf Modu vardır.\nArama işini doğru yapmak için aşağıdaki birkaç basit adımı uygulayın:\n\n1. Birdays uygulaması için bildirimlerin etkinleştirildiğinden emin olun (Ayarlar > Uygulamalar > Birdays).\n\n2. Uygulama arka plan işlemlerini engelleyebilecek görev yöneticileri, görev katilleri veya RAM iyileştiricileri (ör. «Battery Saver», «Clean Master») yüklediyseniz, Beyaz listelerine Birdays ekleyin.\n \n3. Güç tasarrufu modunu kapatın veya Beyaz listedeki Birdays\'i ekleyin (Ayarlar > Pil > Pil optimizasyonu). \nYalnızca Android 6.0 (Marshmallow) veya daha üst bir sürümü çalıştıran cihazlar için.</string>
-    <string name="help_whitelist">Beyaz listeyi aç</string>
-    <string name="help_whitelist_error">Yalnızca Android 6.0 (Marshmallow) veya daha üst bir sürümü çalıştıran cihazlar için</string>
-    <string name="help_delay_text">Unutmayın ki bazı cihazlarda bildirimler gecikme yaşayabilir.</string>
-    <string name="help_settings">Ayarlara git</string>
-    <string name="huawei_header">Huawei sahipleri için</string>
-    <string name="huawei_description">«Ayarlar» ı açın, «Güç tasarrufu» nu seçin ve «Korunan uygulamalar» ı açın. Birdays için bu ayarın açık olduğundan emin olun.</string>
-    <string name="samsung_header">Samsung sahipleri için</string>
-    <string name="samsung_description">«Smart Manager», «Pil» ve sonra «Ayrinti» dokunun. Birdays app için bu özelliği devre dışı bırakın.</string>
-    <string name="xiaomi_header">Huawei sahipleri için</string>
-    <string name="xiaomi_description">«Ayarlar» \'ı açın, «Pil», ardından «Uygulamalarin pil kullanimini yönet» ve «Uygulamaları seçin» seçeneğini açın, Birdays için «Kısıtlama yok» seçeneğini seçin.</string>
-    <string name="show_button">Dizi</string>
-    <string name="help_email_description">Alarm hala çalışmıyorsa, lütfen bana birdaysapp@gmail.com ulaşın</string>
-<<<<<<< HEAD
-    <string name="send_email">E-posta gönder</string>
-=======
-    <string name="send_email">Eposta gönder</string>
+    <string name="help_header">Por que o alarme não está funcionando?</string>
+    <string name="help_description">Alguns dispositivos possuem Modo de economia de energia que podem bloquear processos de fundo do aplicativo ou desativar o aplicativo de execução na inicialização.\nPara fazer o trabalho de alarme funcionar corretamente, estes passos simples abaixo: \n\n1. Verifique se as notificações estão ativadas para o aplicativo Birdays (Definições > Aplicações > Birdays). \n\n2. Se você instalou gerenciadores de tarefas, assasinos de tarefas ou otimizadores de RAM (por exemplo, «Battery Saver», «Clean Master»), que podem bloquear os processos de fundo do aplicativo, adicione Birdays à sua lista branca.\n\n3. Desligue o modo de poupança de energia ou adicione Birdays à lista branca (Definições > Bateria > Otimização da bateria).\nSomente para dispositivos que executam o Android 6.0 (Marshmallow) ou superior.</string>
+    <string name="help_whitelist">Abrir lista branca</string>
+    <string name="help_whitelist_error">Somente para dispositivos que executam o Android 6.0 (Marshmallow) ou superior</string>
+    <string name="help_delay_text">Por favor, note que em alguns dispositivos, notificações poderiam trabalhar com atraso.</string>
+    <string name="help_settings">Abrir definições</string>
+    <string name="huawei_header">Para os proprietários de Huawei</string>
+    <string name="huawei_description">Abra o dispositivo «Definições», vá para «Economia de energia» e abra «Aplicações protegidas». Certifique-se de que este recurso esteja habilitado para Birdays.</string>
+    <string name="samsung_header">Para os proprietários do Samsung</string>
+    <string name="samsung_description">Abra «Smart Manager», toque em «Bateria», depois em «Detalhe». Desative esse recurso para o aplicativo Birdays.</string>
+    <string name="xiaomi_header">Para os proprietários de Xiaomi</string>
+    <string name="xiaomi_description">Abra o dispositivo «Definições», vá para «Bateria e desempenho», em seguida, «Gerir utilizaçáo de bateria das aplicações», abra «Escolher aplicações», escolha« Sem restrições» para Birdays.</string>
+    <string name="show_button">Mostrar</string>
+    <string name="help_email_description">Se o alarme ainda não está funcionando, por favor contacte-me em birdaysapp@gmail.com</string>
+    <string name="send_email">Enviar email</string>
 
     <!-- Famous persons -->
     <!-- 1 january -->
@@ -2862,5 +2861,4 @@
     <string name="kingsley">Ben Kingsley</string>
     <string name="willis">Connie Willis</string>
     <string name="val_kilmer">Val Kilmer</string>
->>>>>>> master
 </resources>
