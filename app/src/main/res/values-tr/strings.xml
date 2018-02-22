@@ -199,9 +199,6 @@
     <string name="xiaomi_description">«Ayarlar» \'ı açın, «Pil», ardından «Uygulamalarin pil kullanimini yönet» ve «Uygulamaları seçin» seçeneğini açın, Birdays için «Kısıtlama yok» seçeneğini seçin.</string>
     <string name="show_button">Dizi</string>
     <string name="help_email_description">Alarm hala çalışmıyorsa, lütfen bana birdaysapp@gmail.com ulaşın</string>
-<<<<<<< HEAD
-    <string name="send_email">E-posta gönder</string>
-=======
     <string name="send_email">Eposta gönder</string>
 
     <!-- Famous persons -->
