@@ -67,3 +67,11 @@ fun Date.daysTo(other: Date): Int {
 }
 
 fun Date.daysTo(): Int = Calendar.getInstance().time.daysTo(this)
+
+fun Date.nextEvent(): Date {
+    return Calendar.getInstance().let {
+        it.time = this
+        it.nextEvent()
+        it.time
+    }
+}

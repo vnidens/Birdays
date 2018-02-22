@@ -4,6 +4,8 @@ import android.arch.persistence.room.Entity
 import android.arch.persistence.room.Ignore
 import android.arch.persistence.room.Index
 import android.arch.persistence.room.PrimaryKey
+import android.os.Parcel
+import android.os.Parcelable
 
 /**
  * Birdays
@@ -40,7 +42,7 @@ data class Person(
         var name: String = "",
         var phone: String? = null,
         var email: String? = null
-) {
+) : Parcelable {
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0
 
@@ -49,4 +51,36 @@ data class Person(
 
     @Ignore
     val events = mutableListOf<Event>()
+
+    constructor(parcel: Parcel) : this(
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString()) {
+        id = parcel.readLong()
+        providerId = parcel.readLong()
+        deleted = parcel.readByte() != 0.toByte()
+    }
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeString(name)
+        parcel.writeString(phone)
+        parcel.writeString(email)
+        parcel.writeLong(id)
+        parcel.writeLong(providerId)
+        parcel.writeByte(if (deleted) 1 else 0)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<Person> {
+        override fun createFromParcel(parcel: Parcel): Person {
+            return Person(parcel)
+        }
+
+        override fun newArray(size: Int): Array<Person?> {
+            return arrayOfNulls(size)
+        }
+    }
 }

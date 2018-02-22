@@ -73,7 +73,9 @@ abstract class AppDatabase : RoomDatabase() {
         return personsDao.getPersons()
                 .doOnNext {
                     it.forEach { person ->
-                        person.events.addAll(eventsDao.getEventsForPersonId(person.id))
+                        eventsDao.getEventsForPersonId(person.id)
+                                .onEach { it.person = person }
+                                .forEach { person.events.add(it) }
                     }
                 }
     }

@@ -241,4 +241,7 @@
     <string name="celebrates_event_name">celebrates %s</string>
     <string name="marks_event_name">marks %s</string>
     <string name="upcoming">Upcoming</string>
+    <string name="other">Other</string>
+    <string name="days_to_next_birthday">%1$s to next birthday</string>
+    <string name="days_to_next_anniversary">%1$s to next anniversary</string>
 </resources>

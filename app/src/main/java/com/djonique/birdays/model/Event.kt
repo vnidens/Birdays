@@ -1,6 +1,8 @@
 package com.djonique.birdays.model
 
 import android.arch.persistence.room.*
+import android.os.Parcel
+import android.os.Parcelable
 import java.util.*
 
 /**
@@ -53,7 +55,7 @@ data class Event(
         var label: String? = null,
         var date: Date = Calendar.getInstance().time,
         var isYearKnown: Boolean = true
-) {
+) : Parcelable {
     enum class Type {
         Custom,
         Anniversary,
@@ -73,4 +75,44 @@ data class Event(
 
     @Ignore
     var person: Person? = null
+
+    constructor(parcel: Parcel) : this(
+            Type.valueOf(parcel.readString()),
+            parcel.readString(),
+            Date().apply { time = parcel.readLong() },
+            parcel.readByte() != 0.toByte()) {
+        id = parcel.readLong()
+        personId = parcel.readLong()
+        dataVersion = parcel.readLong()
+        providerId = parcel.readLong()
+        deleted = parcel.readByte() != 0.toByte()
+        person = parcel.readParcelable(Person::class.java.classLoader)
+    }
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeString(type.name)
+        parcel.writeString(label)
+        parcel.writeLong(date.time)
+        parcel.writeByte(if (isYearKnown) 1 else 0)
+        parcel.writeLong(id)
+        parcel.writeLong(personId)
+        parcel.writeLong(dataVersion)
+        parcel.writeLong(providerId)
+        parcel.writeByte(if (deleted) 1 else 0)
+        parcel.writeParcelable(person, flags)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<Event> {
+        override fun createFromParcel(parcel: Parcel): Event {
+            return Event(parcel)
+        }
+
+        override fun newArray(size: Int): Array<Event?> {
+            return arrayOfNulls(size)
+        }
+    }
 }

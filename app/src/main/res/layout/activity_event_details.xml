@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/container_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.djonique.birdays.activities.EventDetailsActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                style="@style/CollapsingToolbarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <include layout="@layout/toolbar_detail_image" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/scrim_gradient" />
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView style="@style/cardViewStyle">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout style="@style/materialRL">
+
+                            <ImageView
+                                android:id="@+id/imgPerson"
+                                style="@style/detailActivityIcons"
+                                android:layout_width="@dimen/detail_age_size"
+                                android:layout_height="@dimen/detail_age_size"
+                                android:contentDescription="@string/calendar"
+                                android:scaleType="center"
+                                android:tint="@color/blue_to_green"
+                                app:srcCompat="@drawable/ic_person_blue_24dp" />
+
+                            <TextView
+                                android:id="@+id/tvName"
+                                style="@style/EditActivity.Primary.TextView"
+                                android:layout_marginEnd="@dimen/margin_default"
+                                android:layout_marginLeft="@dimen/margin_default"
+                                android:layout_marginRight="@dimen/margin_default"
+                                android:layout_marginStart="@dimen/margin_default"
+                                android:layout_toEndOf="@id/imgPerson"
+                                android:layout_toRightOf="@id/imgPerson"
+                                android:layout_centerVertical="true"
+                                tools:text="@tools:sample/full_names" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout style="@style/materialRL">
+
+                            <TextView
+                                android:id="@+id/textview_detail_age"
+                                android:layout_width="@dimen/detail_age_size"
+                                android:layout_height="@dimen/detail_age_size"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center"
+                                android:textColor="@color/blue_to_green"
+                                android:textSize="24sp"
+                                tools:text="31" />
+
+                            <TextView
+                                android:id="@+id/textview_detail_date"
+                                style="@style/EditActivity.Primary.TextView"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/margin_default"
+                                android:layout_marginLeft="@dimen/margin_default"
+                                android:layout_marginRight="@dimen/margin_default"
+                                android:layout_marginStart="@dimen/margin_default"
+                                android:layout_toEndOf="@+id/textview_detail_age"
+                                android:layout_toRightOf="@+id/textview_detail_age"
+                                tools:text="@tools:sample/date/ddmmyy" />
+
+                        </RelativeLayout>
+
+                        <!-- DaysLeft -->
+                        <RelativeLayout style="@style/materialRL">
+
+                            <ImageView
+                                android:id="@+id/imgDaysTo"
+                                style="@style/detailActivityIcons"
+                                android:layout_width="@dimen/detail_age_size"
+                                android:layout_height="@dimen/detail_age_size"
+                                android:contentDescription="@string/calendar"
+                                android:scaleType="center"
+                                android:tint="@color/blue_to_green"
+                                app:srcCompat="@drawable/ic_calendar_blue_24dp" />
+
+                            <TextView
+                                android:id="@+id/tvDaysTo"
+                                style="@style/EditActivity.Primary.TextView"
+                                android:layout_marginEnd="@dimen/margin_default"
+                                android:layout_marginLeft="@dimen/margin_default"
+                                android:layout_marginRight="@dimen/margin_default"
+                                android:layout_marginStart="@dimen/margin_default"
+                                android:layout_toEndOf="@id/imgDaysTo"
+                                android:layout_toRightOf="@id/imgDaysTo"
+                                tools:text="365" />
+
+                            <TextView
+                                style="@style/EditActivity.Secondary.TextView"
+                                android:id="@+id/tvDaysToDescription"
+                                android:layout_below="@id/tvDaysTo"
+                                android:layout_marginEnd="@dimen/margin_default"
+                                android:layout_marginLeft="@dimen/margin_default"
+                                android:layout_marginRight="@dimen/margin_default"
+                                android:layout_marginStart="@dimen/margin_default"
+                                android:layout_toEndOf="@id/imgDaysTo"
+                                android:layout_toRightOf="@id/imgDaysTo"
+                                tools:text="days to next anniversary" />
+
+                        </RelativeLayout>
+
+                        <!-- DaysSinceBirthdays -->
+                        <RelativeLayout
+                            android:id="@+id/lt_days_since_birth"
+                            style="@style/materialRL">
+
+                            <ImageView
+                                android:id="@+id/imgDaysSinceBirth"
+                                style="@style/detailActivityIcons"
+                                android:contentDescription="@string/calendar"
+                                android:tint="@color/blue_to_green"
+                                app:srcCompat="@drawable/ic_calendar_range_blue_24dp" />
+
+                            <TextView
+                                android:id="@+id/tvDaysSinceBirth"
+                                style="@style/EditActivity.Primary.TextView"
+                                android:layout_marginEnd="@dimen/margin_default"
+                                android:layout_marginLeft="@dimen/margin_default"
+                                android:layout_marginRight="@dimen/margin_default"
+                                android:layout_marginStart="@dimen/margin_default"
+                                android:layout_toEndOf="@id/imgDaysSinceBirth"
+                                android:layout_toRightOf="@id/imgDaysSinceBirth"
+                                tools:text="1000000" />
+
+                            <TextView
+                                style="@style/EditActivity.Secondary.TextView"
+                                android:layout_below="@+id/tvDaysSinceBirth"
+                                android:layout_marginEnd="@dimen/margin_default"
+                                android:layout_marginLeft="@dimen/margin_default"
+                                android:layout_marginRight="@dimen/margin_default"
+                                android:layout_marginStart="@dimen/margin_default"
+                                android:layout_toEndOf="@id/imgDaysSinceBirth"
+                                android:layout_toRightOf="@id/imgDaysSinceBirth"
+                                android:text="@string/days_since_birth" />
+                        </RelativeLayout>
+
+                        <!--Zodiac-->
+                        <RelativeLayout
+                            android:id="@+id/ltZodiacSign"
+                            style="@style/materialRL">
+
+                            <ImageView
+                                android:id="@+id/imgZodiacSign"
+                                style="@style/detailActivityIcons"
+                                android:layout_centerVertical="true"
+                                android:contentDescription="@string/zodiac_sign"
+                                android:tint="@color/blue_to_green"
+                                tools:src="@tools:sample/avatars" />
+
+                            <TextView
+                                android:id="@+id/tvZodiacSign"
+                                style="@style/EditActivity.Primary.TextView"
+                                android:layout_marginEnd="@dimen/margin_default"
+                                android:layout_marginLeft="@dimen/margin_default"
+                                android:layout_marginRight="@dimen/margin_default"
+                                android:layout_marginStart="@dimen/margin_default"
+                                android:layout_toEndOf="@id/imgZodiacSign"
+                                android:layout_toRightOf="@id/imgZodiacSign"
+                                tools:text="@tools:sample/lorem" />
+
+                            <TextView
+                                style="@style/EditActivity.Secondary.TextView"
+                                android:layout_below="@+id/tvZodiacSign"
+                                android:layout_marginEnd="@dimen/margin_default"
+                                android:layout_marginLeft="@dimen/margin_default"
+                                android:layout_marginRight="@dimen/margin_default"
+                                android:layout_marginStart="@dimen/margin_default"
+                                android:layout_toEndOf="@id/imgZodiacSign"
+                                android:layout_toRightOf="@id/imgZodiacSign"
+                                android:text="@string/zodiac_sign" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardview_detail_info"
+                    style="@style/cardViewStyle">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <!-- Phone number -->
+                        <RelativeLayout
+                            android:id="@+id/ltPhone"
+                            style="@style/contactsInfoRL">
+
+                            <ImageView
+                                android:id="@+id/imgPhone"
+                                style="@style/detailActivityIcons"
+                                android:layout_marginLeft="@dimen/margin_default"
+                                android:layout_marginStart="@dimen/margin_default"
+                                android:contentDescription="@string/phone_number"
+                                android:tint="@color/blue_to_green"
+                                app:srcCompat="@drawable/ic_call_blue_24dp" />
+
+                            <TextView
+                                android:id="@+id/tvPhone"
+                                style="@style/Primary.TextView"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/margin_default"
+                                android:layout_marginLeft="@dimen/margin_default"
+                                android:layout_marginRight="@dimen/margin_default"
+                                android:layout_marginStart="@dimen/margin_default"
+                                android:layout_toEndOf="@id/imgPhone"
+                                android:layout_toLeftOf="@id/btnSendMessage"
+                                android:layout_toRightOf="@id/imgPhone"
+                                android:layout_toStartOf="@id/btnSendMessage"
+                                tools:text="@tools:sample/us_phones" />
+
+                            <ImageButton
+                                android:id="@+id/btnSendMessage"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/margin_default"
+                                android:layout_marginRight="@dimen/margin_default"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="@string/chat"
+                                android:scaleType="center"
+                                android:tint="@color/blue_to_green"
+                                app:srcCompat="@drawable/ic_chat_blue_24dp" />
+
+                        </RelativeLayout>
+
+                        <!--Email-->
+                        <RelativeLayout
+                            android:id="@+id/ltEmail"
+                            style="@style/contactsInfoRL">
+
+                            <ImageView
+                                style="@style/detailActivityIcons"
+                                android:id="@+id/imgEmail"
+                                android:layout_marginLeft="@dimen/margin_default"
+                                android:layout_marginStart="@dimen/margin_default"
+                                android:contentDescription="@string/phone_number"
+                                android:tint="@color/blue_to_green"
+                                app:srcCompat="@drawable/ic_email_blue_24dp" />
+
+                            <TextView
+                                style="@style/Primary.TextView"
+                                android:id="@+id/tvEmail"
+                                android:layout_marginStart="@dimen/margin_default"
+                                android:layout_marginLeft="@dimen/margin_default"
+                                android:layout_marginEnd="@dimen/margin_default"
+                                android:layout_marginRight="@dimen/margin_default"
+                                android:layout_toEndOf="@id/imgEmail"
+                                android:layout_toRightOf="@id/imgEmail"
+                                android:layout_centerVertical="true"
+                                tools:text="@tools:sample/lorem"/>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fab_margin_detail"
+            android:layout_marginRight="@dimen/fab_margin_detail"
+            app:backgroundTint="@color/accent_green_200"
+            app:elevation="6dp"
+            app:layout_anchor="@id/appbar_detail"
+            app:layout_anchorGravity="bottom|right|end"
+            app:pressedTranslationZ="12dp"
+            app:rippleColor="@color/ripple"
+            app:srcCompat="@drawable/ic_edit_grey_24dp" />
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>

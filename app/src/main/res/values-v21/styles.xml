@@ -46,11 +46,9 @@
         <item name="android:layout_marginStart">@dimen/edit_textview_left_padding</item>
     </style>
 
-    <style name="detailActivityIcons">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingLeft">@dimen/detail_activity_icon_padding</item>
-        <item name="android:paddingStart">@dimen/detail_activity_icon_padding</item>
-        <item name="android:paddingTop">@dimen/detail_activity_icon_padding</item>
-    </style>
+    <!--<style name="detailActivityIcons">-->
+        <!--<item name="android:layout_width">wrap_content</item>-->
+        <!--<item name="android:layout_height">wrap_content</item>-->
+        <!--<item name="android:layout_centerVertical">true</item>-->
+    <!--</style>-->
 </resources>

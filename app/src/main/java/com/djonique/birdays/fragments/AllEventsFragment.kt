@@ -1,5 +1,6 @@
 package com.djonique.birdays.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -11,6 +12,7 @@ import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.Unbinder
 import com.djonique.birdays.R
+import com.djonique.birdays.activities.EventDetailsActivity
 import com.djonique.birdays.adapters.AllEventsAdapter
 import com.djonique.birdays.adapters.EventsAdapter
 import com.djonique.birdays.database.AppDatabase
@@ -69,6 +71,8 @@ class AllEventsFragment
         unbinder = ButterKnife.bind(this, v)
 
         adapter = AllEventsAdapter(inflater.context)
+        adapter.onEventSelectedListener = this
+        adapter.onItemLongClickListener = this
 
         recyclerView.layoutManager = LinearLayoutManager(inflater.context)
         recyclerView.adapter = adapter
@@ -98,11 +102,15 @@ class AllEventsFragment
 
     override fun onDestroyView() {
         unbinder?.unbind()
+        adapter.onItemLongClickListener = null
+        adapter.onEventSelectedListener = null
         super.onDestroyView()
     }
 
     override fun onEventSelected(event: Event, person: Person) {
-        //TODO:
+        val intent = Intent(context, EventDetailsActivity::class.java)
+        intent.putExtra(EventDetailsActivity.EXTRA_EVENT, event)
+        startActivity(intent)
     }
 
     override fun onItemLongClick(event: Event, person: Person) {

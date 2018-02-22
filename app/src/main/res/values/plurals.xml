@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <plurals name="in_days">
-        <item quantity="one">in %d day</item>
+        <item quantity="zero">Today</item>
+        <item quantity="one">Tomorrow</item>
+        <item quantity="few">in %d days</item>
         <item quantity="many">in %d days</item>
+    </plurals>
+
+    <plurals name="days">
+        <item quantity="zero">days</item>
+        <item quantity="one">day</item>
+        <item quantity="few">days</item>
+        <item quantity="many">days</item>
     </plurals>
 </resources>
